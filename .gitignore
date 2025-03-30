@@ -93,3 +93,16 @@ $RECYCLE.BIN/
 .vs/LibraryManager/CopilotIndices/17.12.53.23981/CodeChunks.db
 .vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-shm
 .vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-wal
+*.db
+.vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-shm
+.vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-wal
+.vs/LibraryManager/DesignTimeBuild/.dtbcache.v2
+.vs/LibraryManager/v17/.futdcache.v2
+.vs/LibraryManager/v17/.suo
+.vs/LibraryManager/v17/.wsuo
+.vs/LibraryManager/v17/DocumentLayout.backup.json
+.vs/LibraryManager/v17/DocumentLayout.json
+.vs/ProjectEvaluation/librarymanager.metadata.v9.bin
+.vs/ProjectEvaluation/librarymanager.projects.v9.bin
+.vs/ProjectEvaluation/librarymanager.strings.v9.bin
+.vs/VSWorkspaceState.json
