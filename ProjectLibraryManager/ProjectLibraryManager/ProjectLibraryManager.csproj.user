@@ -7,11 +7,5 @@
     <Compile Update="LichSuHoatDong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MuonThietBi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="QLMuonTraGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
