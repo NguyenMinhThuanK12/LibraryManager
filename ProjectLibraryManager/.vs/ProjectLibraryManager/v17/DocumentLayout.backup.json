@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\LibraryManager\\ProjectLibraryManager\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD33790-F099-478E-9B52-DA804D67E6C6}|ProjectLibraryManager\\ProjectLibraryManager.csproj|c:\\users\\pc\\desktop\\librarymanager\\projectlibrarymanager\\projectlibrarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD33790-F099-478E-9B52-DA804D67E6C6}|ProjectLibraryManager\\ProjectLibraryManager.csproj|solutionrelative:projectlibrarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD33790-F099-478E-9B52-DA804D67E6C6}|ProjectLibraryManager\\ProjectLibraryManager.csproj|c:\\users\\pc\\desktop\\librarymanager\\projectlibrarymanager\\projectlibrarymanager\\lichsuhoatdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD33790-F099-478E-9B52-DA804D67E6C6}|ProjectLibraryManager\\ProjectLibraryManager.csproj|solutionrelative:projectlibrarymanager\\lichsuhoatdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LichSuHoatDong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\LibraryManager\\ProjectLibraryManager\\ProjectLibraryManager\\LichSuHoatDong.cs",
+              "RelativeDocumentMoniker": "ProjectLibraryManager\\LichSuHoatDong.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\LibraryManager\\ProjectLibraryManager\\ProjectLibraryManager\\LichSuHoatDong.cs [Design]*",
+              "RelativeToolTip": "ProjectLibraryManager\\LichSuHoatDong.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T09:46:09.338Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "KhuyenMaiGUI.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\LibraryManager\\ProjectLibraryManager\\ProjectLibraryManager\\KhuyenMaiGUI.cs",
+              "RelativeDocumentMoniker": "ProjectLibraryManager\\KhuyenMaiGUI.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\LibraryManager\\ProjectLibraryManager\\ProjectLibraryManager\\KhuyenMaiGUI.cs [Design]*",
+              "RelativeToolTip": "ProjectLibraryManager\\KhuyenMaiGUI.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T08:32:00.755Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
