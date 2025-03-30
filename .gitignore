@@ -1,0 +1,86 @@
+﻿# Build folders
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Visual Studio folder
+.vs/
+
+# Windows Form Designer generated files (optional)
+*.Designer.cs~
+
+# Auto-generated build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+# Other IDE
+.idea/
+*.tss
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# JetBrains Rider cache
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.orig
+
+# Publish output
+publish/
+*.publish.xml
+
+# Deployment
+*.ClickOnce/
+
+# Logs
+*.log
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Windows image cache
+*.db
+
+# GitHub Copilot
+.copilot/
+
+# Backup files
+*~
+
+# Images added manually
+# (Chỉ giữ nếu bạn không muốn thêm ảnh test, hoặc files tạm)
+# *.png
+# *.jpg
