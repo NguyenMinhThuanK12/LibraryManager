@@ -90,3 +90,6 @@ $RECYCLE.BIN/
 # (Chỉ giữ nếu bạn không muốn thêm ảnh test, hoặc files tạm)
 # *.png
 # *.jpg
+.vs/LibraryManager/CopilotIndices/17.12.53.23981/CodeChunks.db
+.vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-shm
+.vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-wal
