@@ -79,6 +79,7 @@ $RECYCLE.BIN/
 
 # Backup files
 *~
+
 # Ignore Visual Studio files
 .vs/
 *.db
@@ -86,14 +87,11 @@ $RECYCLE.BIN/
 *.db-wal
 *.sqlite
 
-# Images added manually
-# (Chỉ giữ nếu bạn không muốn thêm ảnh test, hoặc files tạm)
-# *.png
-# *.jpg
+# Ignore Visual Studio Code workspace and settings files
+.vscode/
+
+# Ignore local project evaluation files
 .vs/LibraryManager/CopilotIndices/17.12.53.23981/CodeChunks.db
-.vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-shm
-.vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-wal
-*.db
 .vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-shm
 .vs/LibraryManager/CopilotIndices/17.12.53.23981/SemanticSymbols.db-wal
 .vs/LibraryManager/DesignTimeBuild/.dtbcache.v2
