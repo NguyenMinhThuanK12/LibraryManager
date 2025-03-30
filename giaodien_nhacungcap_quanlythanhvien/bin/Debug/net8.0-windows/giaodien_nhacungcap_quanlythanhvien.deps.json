@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "giaodien_nhacungcap_quanlythanhvien/1.0.0": {
+        "runtime": {
+          "giaodien_nhacungcap_quanlythanhvien.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "giaodien_nhacungcap_quanlythanhvien/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
