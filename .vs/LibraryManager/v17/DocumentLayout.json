@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\qldatcho.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|C:\\Users\\CUONG\\source\\repos\\LibraryManager\\librarymanager\\qldatcho.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
     },
     {
@@ -48,11 +48,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "QLDatCho.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\CUONG\\Source\\Repos\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.Designer.cs",
-              "ToolTip": "C:\\Users\\CUONG\\Source\\Repos\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
+              "ToolTip": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
               "RelativeToolTip": "LibraryManager\\QLDatCho.Designer.cs",
-              "ViewState": "AQIAAHUAAAAAAAAAAAAYwH8AAAAiAAAA",
+              "ViewState": "AQIAAOEAAAAAAAAAAAAYwPMAAABlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-30T10:35:52.55Z",
               "EditorCaption": ""
@@ -61,9 +61,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "QLDatCho.resx",
-              "DocumentMoniker": "C:\\Users\\CUONG\\Source\\Repos\\LibraryManager\\LibraryManager\\QLDatCho.resx",
+              "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.resx",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.resx",
-              "ToolTip": "C:\\Users\\CUONG\\Source\\Repos\\LibraryManager\\LibraryManager\\QLDatCho.resx",
+              "ToolTip": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.resx",
               "RelativeToolTip": "LibraryManager\\QLDatCho.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
               "WhenOpened": "2025-03-30T10:35:51.268Z",
