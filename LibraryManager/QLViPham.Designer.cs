@@ -47,7 +47,7 @@
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(270, 91);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
             panel1.Size = new Size(1300, 750);
             panel1.TabIndex = 5;
