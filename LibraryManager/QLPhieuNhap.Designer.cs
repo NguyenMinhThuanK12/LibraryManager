@@ -47,7 +47,7 @@
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(261, 91);
+            panel1.Location = new Point(12, 41);
             panel1.Name = "panel1";
             panel1.Size = new Size(1300, 750);
             panel1.TabIndex = 6;
@@ -61,7 +61,6 @@
             label2.Size = new Size(354, 60);
             label2.TabIndex = 5;
             label2.Text = "Quản Lý Vi Phạm";
-            label2.Click += this.label2_Click;
             // 
             // tableLayoutPanel1
             // 
