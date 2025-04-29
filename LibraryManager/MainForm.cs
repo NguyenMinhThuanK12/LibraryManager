@@ -221,6 +221,7 @@ namespace LibraryManager
             else if (string.Equals(module, "Đặt chỗ", StringComparison.OrdinalIgnoreCase))
             {
                 // mở giao diện Đặt chỗ
+                control = new QLDatCho();
             }
             else if (string.Equals(module, "Vi phạm", StringComparison.OrdinalIgnoreCase))
             {
