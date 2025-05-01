@@ -13,6 +13,7 @@ namespace LibraryManager.Model
         public string TheLoai { get; set; }
         public string ViTri { get; set; }
         public int SoLuong { get; set; }
+        public double GiaTri { get; set; }
         public string TrangThai { get; set; }
     }
 }
