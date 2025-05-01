@@ -3,7 +3,8 @@ using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-using LibraryManager.Components;
+using LibraryManager.UI;
+
 
 namespace LibraryManager
 {
