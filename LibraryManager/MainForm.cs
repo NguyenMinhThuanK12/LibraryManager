@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using LibraryManager.UI;
+using ProjectLibraryManager;
 
 
 namespace LibraryManager
@@ -234,6 +235,7 @@ namespace LibraryManager
             else if (string.Equals(module, "Giảm giá", StringComparison.OrdinalIgnoreCase))
             {
                 //  mở giao diện Giảm giá
+                control = new KhuyenMaiGUI();
             }
             else if (string.Equals(module, "Phiếu nhập", StringComparison.OrdinalIgnoreCase))
             {
