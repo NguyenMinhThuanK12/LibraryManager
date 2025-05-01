@@ -21,6 +21,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox picBook;
+        private System.Windows.Forms.PictureBox picClose;
 
         /// <summary>
         ///  Clean up any resources being used.
@@ -96,6 +97,17 @@
             underlineUser.Name = "underlineUser";
             underlineUser.Size = new Size(230, 2);
             underlineUser.TabIndex = 0;
+
+            picClose = new PictureBox();
+            picClose.Image = Properties.Resources.cancel;
+            picClose.SizeMode = PictureBoxSizeMode.Zoom;
+            picClose.Size = new Size(40, 40);
+            picClose.Location = new Point(10, 10);
+            picClose.Cursor = Cursors.Hand;
+            picClose.Click += picClose_Click;
+            panelLeft.Controls.Add(picClose);
+
+
             // 
             // picLogo
             // 
@@ -156,6 +168,7 @@
             // 
             btnLogin.BackColor = Color.Black;
             btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.Cursor = Cursors.Hand;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(82, 457);
@@ -164,6 +177,7 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Đăng nhập";
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // Bo góc tròn bằng Region
             btnLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLogin.Width, btnLogin.Height, 25, 25));
             // 
