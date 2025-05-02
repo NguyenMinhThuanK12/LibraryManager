@@ -3,31 +3,27 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,46 +58,71 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KhuyenMaiGUI.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T16:21:24.439Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "KhuyenMaiGUI.Designer.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.Designer.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.Designer.cs*",
-              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.Designer.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoBAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.Designer.cs",
+              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.Designer.cs",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAgwO8AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:57:23.637Z",
+              "WhenOpened": "2025-05-02T15:20:20.692Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "KhuyenMaiGUI.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
               "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs*",
-              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
+              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs",
+              "ViewState": "AgIAABgBAAAAAAAAAAAAwBEBAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:55:29.402Z",
+              "WhenOpened": "2025-05-02T10:38:25.956Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "DatabaseConnection.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
+              "RelativeToolTip": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T10:32:58.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "QLDatCho.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\QLDatCho.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
               "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\QLDatCho.cs",
               "RelativeToolTip": "LibraryManager\\QLDatCho.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T15:54:20.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "QLDatCho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\QLDatCho.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
@@ -109,43 +130,6 @@
               "RelativeToolTip": "LibraryManager\\QLDatCho.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-01T15:54:11.963Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "KhuyenMaiGUI.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs [Design]*",
-              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:50:33.572Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\MainForm.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\MainForm.cs",
-              "RelativeToolTip": "LibraryManager\\MainForm.cs",
-              "ViewState": "AgIAANMAAAAAAAAAAADwv+0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:48:30.099Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\MainForm.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\MainForm.cs [Design]",
-              "RelativeToolTip": "LibraryManager\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:48:16.703Z",
               "EditorCaption": " [Design]"
             }
           ]
