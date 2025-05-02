@@ -11,6 +11,9 @@ namespace LibraryManager.Model
         public int Id { get; set; }
         public string TenThietBi { get; set; }
         public string TheLoai { get; set; }
+        public int IDTheLoai { get; set; }
+        public int IDViTri { get; set; }
+        public int IDTang { get; set; }
         public string ViTri { get; set; }
         public int SoLuong { get; set; }
         public double GiaTri { get; set; }

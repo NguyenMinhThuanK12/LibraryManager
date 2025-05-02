@@ -1,7 +1,6 @@
-﻿// ===========================
-// File: UI/DeviceManagementPanel.cs
-// ===========================
+﻿// File: UI/QLThietBi.cs
 using LibraryManager.Model;
+using LibraryManager.Models;
 using LibraryManager.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,37 +9,37 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
-namespace LibraryManager.UI
+namespace LibraryManager.UI.QLThietBi
 {
-    public class DeviceManagementPanel : UserControl
+    public class QLThietBi : UserControl
     {
         private Panel headerPanel;
         private FlowLayoutPanel contentTable; // Bảng hiển thị danh sách thiết bị
         private Label lblTitle;
         private TextBox txtSearch;
         private Button btnAddDevice, btnRefresh;
+        private ComboBox cbFilterTheLoai;
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
+        private static extern nint CreateRoundRectRgn(int nLeftRect, int nTopRect, int nRightRect, int nBottomRect, int nWidthEllipse, int nHeightEllipse);
 
         // Cấu hình bảng
-        private readonly int[] columnWidths = { 60, 250, 200, 200, 100, 150, 150, 200 }; // Thêm "Giá trị"
+        private readonly int[] columnWidths = { 60, 250, 200, 200, 100, 150, 150, 200 };
         private readonly string[] columnHeaders = { "ID", "Tên thiết bị", "Thể loại", "Vị trí", "Số lượng", "Giá trị", "Trạng thái", "Action" };
 
-        private List<DeviceModel> allDevices; // Danh sách toàn bộ thiết bị (phục vụ lọc)
+        private List<DeviceModel> allDevices;
 
-        public DeviceManagementPanel()
+        public QLThietBi()
         {
             InitializeComponent();
-            LoadDevices(); // Tải danh sách thiết bị ban đầu
+            LoadTheLoaiFilter();
+            LoadDevices();
         }
 
         private void InitializeComponent()
         {
             Size = new Size(1400, 750);
             BackColor = Color.White;
-
-            // 1. Tạo bảng hiển thị dữ liệu (FlowLayoutPanel)
             contentTable = new FlowLayoutPanel
             {
                 Location = new Point(0, 70),
@@ -51,8 +50,6 @@ namespace LibraryManager.UI
                 WrapContents = false
             };
             Controls.Add(contentTable);
-
-            // 2. Header tìm kiếm và nút chức năng
             InitializeHeader();
         }
 
@@ -70,7 +67,7 @@ namespace LibraryManager.UI
                 Text = "Quản lý thiết bị",
                 Font = new Font("Segoe UI", 16, FontStyle.Bold),
                 ForeColor = Color.Black,
-                Location = new Point(15, 20),
+                Location = new Point(15, 15),
                 AutoSize = true
             };
 
@@ -78,7 +75,7 @@ namespace LibraryManager.UI
             {
                 Size = new Size(420, 40),
                 BackColor = Color.White,
-                Location = new Point(420, 15),
+                Location = new Point(250, 15),
                 BorderStyle = BorderStyle.None,
                 Padding = new Padding(10, 5, 5, 5),
                 Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, 420, 40, 15, 15))
@@ -119,6 +116,28 @@ namespace LibraryManager.UI
             };
             txtSearch.TextChanged += (s, e) => FilterDevices(txtSearch.Text);
 
+            cbFilterTheLoai = new ComboBox
+            {
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Font = new Font("Segoe UI", 10),
+                Location = new Point(690, 20),
+                Size = new Size(200, 50),
+            };
+            cbFilterTheLoai.SelectedIndexChanged += (s, e) =>
+            {
+                if (cbFilterTheLoai.SelectedIndex <= 0)
+                {
+                    DisplayDevices(allDevices);
+                }
+                else
+                {
+                    int selectedMaTL = (int)cbFilterTheLoai.SelectedValue;
+                    var repo = new TheLoaiRepository();
+                    var filtered = repo.SearchDevicesByTheLoai(selectedMaTL);
+                    DisplayDevices(filtered);
+                }
+            };
+
             btnRefresh = new Button
             {
                 Text = "  Làm mới",
@@ -127,7 +146,7 @@ namespace LibraryManager.UI
                 ImageAlign = ContentAlignment.MiddleLeft,
                 Font = new Font("Segoe UI", 10),
                 Size = new Size(180, 40),
-                Location = new Point(900, 15),
+                Location = new Point(910, 15),
                 BackColor = Color.Gainsboro,
                 ForeColor = Color.Black,
                 FlatStyle = FlatStyle.Flat,
@@ -157,9 +176,16 @@ namespace LibraryManager.UI
                 Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, 180, 40, 10, 10))
             };
             btnAddDevice.FlatAppearance.BorderSize = 0;
+            btnAddDevice.Click += (s, e) =>
+            {
+                var addForm = new ThemThietBi();
+                addForm.OnDeviceAdded += LoadDevices;
+                addForm.Show();
+            };
 
             searchPanel.Controls.Add(searchIcon);
             searchPanel.Controls.Add(txtSearch);
+            headerPanel.Controls.Add(cbFilterTheLoai);
             headerPanel.Controls.Add(searchPanel);
             headerPanel.Controls.Add(lblTitle);
             headerPanel.Controls.Add(btnRefresh);
@@ -172,6 +198,17 @@ namespace LibraryManager.UI
             var repo = new DeviceRepository();
             allDevices = repo.GetAllDevices();
             DisplayDevices(allDevices);
+            LoadTheLoaiFilter();
+        }
+
+        private void LoadTheLoaiFilter()
+        {
+            var repo = new TheLoaiRepository();
+            var list = repo.GetAllTheLoai();
+            list.Insert(0, new Models.TheLoaiModel { MaTL = 0, TenTL = "Chọn thể loại" });
+            cbFilterTheLoai.DataSource = list;
+            cbFilterTheLoai.DisplayMember = "TenTL";
+            cbFilterTheLoai.ValueMember = "MaTL";
         }
 
         private void FilterDevices(string keyword)
@@ -180,11 +217,10 @@ namespace LibraryManager.UI
             var filteredDevices = repo.SearchDevices(keyword);
             DisplayDevices(filteredDevices);
         }
+
         private void DisplayDevices(List<DeviceModel> devices)
         {
             contentTable.Controls.Clear();
-
-            // Vẽ lại dòng tiêu đề bảng
             Panel headerRow = new Panel { Size = new Size(1380, 40), BackColor = Color.White };
             for (int i = 0, x = 50; i < columnHeaders.Length; i++)
             {
@@ -201,10 +237,9 @@ namespace LibraryManager.UI
             }
             contentTable.Controls.Add(headerRow);
             contentTable.Controls.Add(new Panel { BackColor = Color.LightGray, Size = new Size(1380, 1) });
-
-            // Hiển thị từng dòng dữ liệu
-            foreach (var device in devices)
+            for (int i = 0; i < devices.Count; i++)
             {
+                DeviceModel device = devices[i];
                 contentTable.Controls.Add(CreateDeviceRow(device));
             }
         }
@@ -238,6 +273,32 @@ namespace LibraryManager.UI
             PictureBox picEdit = CreateIconButton(Properties.Resources.edit, x);
             PictureBox picDelete = CreateIconButton(Properties.Resources.delete, x + 30);
             PictureBox picDetail = CreateIconButton(Properties.Resources.view, x + 60);
+
+            picEdit.Click += (s, e) =>
+            {
+                var updateForm = new CapNhat(device);
+                updateForm.OnDeviceUpdated += LoadDevices;
+                updateForm.Show();
+                LoadDevices();
+            };
+
+            picDelete.Click += (s, e) =>
+            {
+                var confirm = MessageBox.Show($"Bạn có chắc muốn xóa thiết bị \"{device.TenThietBi}\" không?", "Xác nhận xoá", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirm == DialogResult.Yes)
+                {
+                    var repo = new DeviceRepository();
+                    bool success = repo.DeleteDevice(device.Id);
+                    if (success) LoadDevices();
+                    else MessageBox.Show("Xoá thất bại!", "Lỗi");
+                }
+            };
+
+            picDetail.Click += (s, e) =>
+            {
+                var form = new XemChiTiet(device);
+                form.Show();
+            };
             dataRow.Controls.AddRange(new Control[] { picEdit, picDelete, picDetail });
 
             return dataRow;
