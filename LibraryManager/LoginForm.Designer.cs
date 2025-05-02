@@ -18,7 +18,6 @@
         private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Label lblTitleRight;
         private System.Windows.Forms.Label lblRegisterPrompt;
-        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.PictureBox picLogo;
         private System.Windows.Forms.PictureBox picBook;
         private System.Windows.Forms.PictureBox picClose;
@@ -53,13 +52,14 @@
             txtPassword = new TextBox();
             lblForgotPassword = new Label();
             btnLogin = new Button();
+            picClose = new PictureBox();
             panelRight = new Panel();
             picBook = new PictureBox();
             lblTitleRight = new Label();
             lblRegisterPrompt = new Label();
-            btnRegister = new Button();
             panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picClose).BeginInit();
             panelRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBook).BeginInit();
             SuspendLayout();
@@ -75,6 +75,7 @@
             panelLeft.Controls.Add(txtPassword);
             panelLeft.Controls.Add(lblForgotPassword);
             panelLeft.Controls.Add(btnLogin);
+            panelLeft.Controls.Add(picClose);
             panelLeft.Dock = DockStyle.Left;
             panelLeft.Location = new Point(0, 0);
             panelLeft.Name = "panelLeft";
@@ -97,17 +98,6 @@
             underlineUser.Name = "underlineUser";
             underlineUser.Size = new Size(230, 2);
             underlineUser.TabIndex = 0;
-
-            picClose = new PictureBox();
-            picClose.Image = Properties.Resources.cancel;
-            picClose.SizeMode = PictureBoxSizeMode.Zoom;
-            picClose.Size = new Size(40, 40);
-            picClose.Location = new Point(10, 10);
-            picClose.Cursor = Cursors.Hand;
-            picClose.Click += picClose_Click;
-            panelLeft.Controls.Add(picClose);
-
-
             // 
             // picLogo
             // 
@@ -167,8 +157,8 @@
             // btnLogin
             // 
             btnLogin.BackColor = Color.Black;
-            btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Cursor = Cursors.Hand;
+            btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
             btnLogin.Location = new Point(82, 457);
@@ -178,8 +168,18 @@
             btnLogin.Text = "Đăng nhập";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
-            // Bo góc tròn bằng Region
-            btnLogin.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnLogin.Width, btnLogin.Height, 25, 25));
+            // 
+            // picClose
+            // 
+            picClose.Cursor = Cursors.Hand;
+            picClose.Image = Properties.Resources.cancel;
+            picClose.Location = new Point(10, 10);
+            picClose.Name = "picClose";
+            picClose.Size = new Size(40, 40);
+            picClose.SizeMode = PictureBoxSizeMode.Zoom;
+            picClose.TabIndex = 6;
+            picClose.TabStop = false;
+            picClose.Click += picClose_Click;
             // 
             // panelRight
             // 
@@ -187,7 +187,6 @@
             panelRight.Controls.Add(picBook);
             panelRight.Controls.Add(lblTitleRight);
             panelRight.Controls.Add(lblRegisterPrompt);
-            panelRight.Controls.Add(btnRegister);
             panelRight.Dock = DockStyle.Fill;
             panelRight.Location = new Point(400, 0);
             panelRight.Name = "panelRight";
@@ -197,9 +196,9 @@
             // picBook
             // 
             picBook.Image = Properties.Resources.booklogo;
-            picBook.Location = new Point(117, 12);
+            picBook.Location = new Point(76, 57);
             picBook.Name = "picBook";
-            picBook.Size = new Size(319, 307);
+            picBook.Size = new Size(379, 387);
             picBook.SizeMode = PictureBoxSizeMode.Zoom;
             picBook.TabIndex = 0;
             picBook.TabStop = false;
@@ -209,7 +208,7 @@
             lblTitleRight.AutoSize = true;
             lblTitleRight.Font = new Font("Segoe UI", 26F, FontStyle.Bold);
             lblTitleRight.ForeColor = Color.White;
-            lblTitleRight.Location = new Point(37, 312);
+            lblTitleRight.Location = new Point(34, 447);
             lblTitleRight.Name = "lblTitleRight";
             lblTitleRight.Size = new Size(462, 60);
             lblTitleRight.TabIndex = 1;
@@ -221,27 +220,9 @@
             lblRegisterPrompt.ForeColor = Color.White;
             lblRegisterPrompt.Location = new Point(117, 397);
             lblRegisterPrompt.Name = "lblRegisterPrompt";
-            lblRegisterPrompt.Size = new Size(310, 20);
+            lblRegisterPrompt.Size = new Size(0, 20);
             lblRegisterPrompt.TabIndex = 2;
-            lblRegisterPrompt.Text = "Bạn chưa có tài khoản? Đăng ký ngay bây giờ";
-            // 
-            // btnRegister
-            // 
-            btnRegister.BackColor = Color.Black;
-            btnRegister.FlatStyle = FlatStyle.Flat;
-            btnRegister.FlatAppearance.BorderSize = 0;
-            btnRegister.Font = new Font("Segoe UI", 13F, FontStyle.Underline | FontStyle.Bold);
-            btnRegister.ForeColor = Color.White;
-            btnRegister.Location = new Point(207, 445);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(161, 56);
-            btnRegister.TabIndex = 3;
-            btnRegister.Text = "Đăng ký";
-            btnRegister.UseVisualStyleBackColor = false;
-            btnRegister.FlatAppearance.MouseDownBackColor = Color.Black; //  không nháy khi bấm
-            btnRegister.FlatAppearance.MouseOverBackColor = Color.Black; //  không đổi nền khi hover
-            btnRegister.Cursor = Cursors.Hand; //  hiển thị bàn tay khi hover
-            btnRegister.Click += btnRegister_Click;
+            lblRegisterPrompt.Click += lblRegisterPrompt_Click;
             // 
             // LoginForm
             // 
@@ -255,6 +236,7 @@
             panelLeft.ResumeLayout(false);
             panelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picClose).EndInit();
             panelRight.ResumeLayout(false);
             panelRight.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picBook).EndInit();

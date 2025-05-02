@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using LibraryManager.UI;
+using LibraryManager.UI.QLThietBi;
 
 
 namespace LibraryManager
@@ -219,7 +220,7 @@ namespace LibraryManager
             else if (string.Equals(module, "Thiết bị", StringComparison.OrdinalIgnoreCase))
             {
                 // mở giao diện Thiết bị
-                control = new DeviceManagementPanel();
+                control = new QLThietBi();
             }
             else if (string.Equals(module, "Đặt chỗ", StringComparison.OrdinalIgnoreCase))
             {

@@ -76,7 +76,16 @@ namespace LibraryManager
 
         private void picClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            var confirm = MessageBox.Show("Bạn có chắc chắn muốn thoát chương trình không?", "Xác nhận thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirm == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
+
+        private void lblRegisterPrompt_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }
