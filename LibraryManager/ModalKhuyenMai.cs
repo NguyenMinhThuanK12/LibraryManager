@@ -36,7 +36,6 @@ namespace LibraryManager
 
         private void LoadProductCombo()
         {
-            // Lấy MaSanPham, TenSanPham từ bảng products
             var dt = DatabaseConnection.ExecuteSelectQuery(
                 "SELECT MaSanPham, TenSanPham FROM sanpham");
             comboBox1.DataSource = dt;
@@ -128,7 +127,6 @@ namespace LibraryManager
 
         private string GenerateNextMaKhuyenMai()
         {
-            // Lấy max sequence đã sinh trong cùng promo
             string sql = @"SELECT IFNULL(MAX(MaKhuyenMaiSanPham), 0)
                            FROM khuyenmaisanpham
                            WHERE MaKhuyenMai = @mact";
@@ -154,7 +152,6 @@ namespace LibraryManager
                   ? Color.LightBlue
                   : Color.White;
             }
-            // Hiển thị mã chi tiết lên ô để người dùng biết
             richTextBox3.Text = detailId;
         }
 
@@ -208,7 +205,6 @@ namespace LibraryManager
                     cmd.ExecuteNonQuery();
                 }
 
-                // Làm mới lại bảng
                 selectedDetailId = null;
                 loadDetailKhuyenMai();
                 MessageBox.Show("Đã xóa thành công!", "Thành công",
@@ -242,7 +238,6 @@ namespace LibraryManager
             // Nếu đang không trong chế độ chỉnh sửa
             if (!isEditing)
             {
-                // Kiểm tra đã chọn dòng chưa
                 if (string.IsNullOrEmpty(selectedDetailId))
                 {
                     MessageBox.Show("Vui lòng chọn 1 dòng để sửa.", "Thông báo",
@@ -250,7 +245,6 @@ namespace LibraryManager
                     return;
                 }
 
-                // Lấy dữ liệu từ database
                 string sql = @"SELECT MaSanPham, PhanTramKhuyenMai 
                                FROM khuyenmaisanpham 
                                WHERE MaKhuyenMaiSanPham = @msp";
@@ -262,7 +256,6 @@ namespace LibraryManager
                     {
                         if (reader.Read())
                         {
-                            // Đổ dữ liệu lên form
                             comboBox1.SelectedValue = reader["MaSanPham"].ToString();
                             richTextBox4.Text = reader["PhanTramKhuyenMai"].ToString();
                         }
@@ -272,11 +265,10 @@ namespace LibraryManager
                 // Chuyển sang chế độ chỉnh sửa
                 isEditing = true;
                 button2.Text = "Lưu";
-                comboBox1.Enabled = false; // Khóa comboBox để không đổi sản phẩm
+                comboBox1.Enabled = false; // Khóa comboBox để không đổi sản phẩm (optional)
             }
             else // Đang trong chế độ chỉnh sửa - thực hiện lưu
             {
-                // Validate dữ liệu
                 if (!decimal.TryParse(richTextBox4.Text.Trim(), out decimal pct))
                 {
                     MessageBox.Show("Nhập phần trăm giảm hợp lệ.", "Lỗi",
@@ -284,7 +276,6 @@ namespace LibraryManager
                     return;
                 }
 
-                // Thực hiện cập nhật
                 string updateSql = @"UPDATE khuyenmaisanpham 
                                      SET PhanTramKhuyenMai = @pt 
                                      WHERE MaKhuyenMaiSanPham = @msp";
@@ -301,13 +292,11 @@ namespace LibraryManager
                     MessageBox.Show("Cập nhật thành công!", "Thành công",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Reset trạng thái
                     isEditing = false;
                     button2.Text = "Sửa";
                     comboBox1.Enabled = true;
                     selectedDetailId = null;
 
-                    // Làm mới dữ liệu
                     loadDetailKhuyenMai();
                     LoadProductCombo();
                     richTextBox4.Clear();
@@ -349,14 +338,12 @@ namespace LibraryManager
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Kiểm tra chọn sản phẩm
             if (comboBox1.SelectedIndex < 0)
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm.", "Lỗi",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            // Kiểm tra phần trăm
             if (!decimal.TryParse(richTextBox4.Text.Trim(), out decimal pct))
             {
                 MessageBox.Show("Nhập phần trăm giảm hợp lệ.", "Lỗi",
@@ -364,7 +351,6 @@ namespace LibraryManager
                 return;
             }
 
-            // Thêm record mới
             string seq = GenerateNextMaKhuyenMai();
             string insertSql = @"INSERT INTO khuyenmaisanpham (MaKhuyenMai, MaKhuyenMaiSanPham, MaSanPham, PhanTramKhuyenMai)
                                  VALUES (@mact, @seq, @prod, @pt)";

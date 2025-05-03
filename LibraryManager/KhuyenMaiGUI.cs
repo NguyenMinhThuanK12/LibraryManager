@@ -27,7 +27,6 @@ namespace ProjectLibraryManager
 
         private void loadKhuyenMaiToTable()
         {
-            // 1. Lấy dữ liệu
             var sql = "SELECT * FROM khuyenmai";
             DataTable dt = DatabaseConnection.ExecuteSelectQuery(sql);
 
@@ -35,7 +34,6 @@ namespace ProjectLibraryManager
             tableLayoutPanel1.RowStyles.Clear();
             tableLayoutPanel1.RowCount = 0;
 
-            // 3. Thêm từng dòng dữ liệu
             int rowIndex = 0;
             foreach (DataRow dr in dt.Rows)
             {
@@ -152,16 +150,14 @@ namespace ProjectLibraryManager
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            // tạo modal xem chi tiết
             var btn = (Button)sender;
             var promoId = btn.Tag.ToString();
 
-            // Mỗi lần bấm tạo một instance mới, truyền promoId vào
             using (var modal = new ModalKhuyenMai(promoId))
             {
                 if (modal.ShowDialog() == DialogResult.OK)
                 {
-                    // Nếu trong modal bạn đặt DialogResult = OK khi lưu,
-                    // thì sau khi đóng bạn có thể reload bảng chính:
                     loadKhuyenMaiToTable();
                 }
             }
@@ -171,13 +167,11 @@ namespace ProjectLibraryManager
         {
             try
             {
-                // 1. Đọc giá trị từ form
                 string maCT = richTextBox2.Text.Trim();
                 string tenCT = richTextBox3.Text.Trim();
                 string ngayBD = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 string ngayKT = dateTimePicker2.Value.ToString("yyyy-MM-dd");
 
-                // Kiểm tra không để trống
                 if (string.IsNullOrEmpty(maCT) || string.IsNullOrEmpty(tenCT))
                 {
                     MessageBox.Show("Bạn phải nhập cả Mã chương trình và Tên chương trình!",
@@ -187,7 +181,6 @@ namespace ProjectLibraryManager
                     return;
                 }
 
-                // 2. Chèn vào database
                 string sql = @"INSERT INTO khuyenmai (MaKhuyenMai, TenKhuyenMai, NgayBatDau, NgayKetThuc)
                                VALUES (@ma, @ten, @bd, @kt)";
 
@@ -204,7 +197,6 @@ namespace ProjectLibraryManager
                         throw new Exception("Không có bản ghi nào được thêm.");
                 }
 
-                // 3. Làm mới TableLayoutPanel
                 loadKhuyenMaiToTable();
 
                 MessageBox.Show("Thêm chương trình khuyến mãi thành công!",
@@ -225,7 +217,7 @@ namespace ProjectLibraryManager
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // 1) Nếu chưa vào edit mode: load dữ liệu lên form
+            // Đang ở default mode: chọn dòng UPDATE
             if (!isEditing)
             {
                 if (string.IsNullOrEmpty(selectedMaKhuyenMai))
@@ -235,7 +227,6 @@ namespace ProjectLibraryManager
                     return;
                 }
 
-                // Lấy dữ liệu chi tiết từ database
                 string sql = "SELECT * FROM khuyenmai WHERE MaKhuyenMai = @ma";
                 DataTable dt;
                 using (var conn = DatabaseConnection.GetConnection())
@@ -250,22 +241,19 @@ namespace ProjectLibraryManager
                 if (dt.Rows.Count == 0) return;
                 var dr = dt.Rows[0];
 
-                // Đổ lên form
                 richTextBox2.Text = dr["MaKhuyenMai"].ToString();
                 richTextBox3.Text = dr["TenKhuyenMai"].ToString();
                 dateTimePicker1.Value = Convert.ToDateTime(dr["NgayBatDau"]);
                 dateTimePicker2.Value = Convert.ToDateTime(dr["NgayKetThuc"]);
 
-                // Vô hiệu hóa sửa mã
                 richTextBox2.Enabled = false;
 
-                // Chuyển sang chế độ “Lưu”
                 isEditing = true;
                 button2.Text = "Lưu";
             }
             else
             {
-                // 2) Đang ở edit mode: thực hiện UPDATE
+                // Đang ở edit mode: thực hiện UPDATE
                 string ten = richTextBox3.Text.Trim();
                 string bd = dateTimePicker1.Value.ToString("yyyy-MM-dd");
                 string kt = dateTimePicker2.Value.ToString("yyyy-MM-dd");
@@ -298,7 +286,6 @@ namespace ProjectLibraryManager
                     MessageBox.Show("Cập nhật thành công!", "Thành công",
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Reset form và reload bảng
                     richTextBox2.Enabled = false;
                     richTextBox2.Text = GenerateNextMaKhuyenMai();
                     richTextBox3.Clear();
@@ -349,7 +336,6 @@ namespace ProjectLibraryManager
                     cmd.ExecuteNonQuery();
                 }
 
-                // Làm mới lại bảng
                 selectedMaKhuyenMai = null;
                 loadKhuyenMaiToTable();
                 MessageBox.Show("Đã xóa thành công!", "Thành công",
