@@ -31,9 +31,11 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
+            comboBox1 = new ComboBox();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
+            richTextBox4 = new RichTextBox();
             richTextBox3 = new RichTextBox();
             richTextBox2 = new RichTextBox();
             label5 = new Label();
@@ -46,8 +48,6 @@
             label7 = new Label();
             label6 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
-            richTextBox1 = new RichTextBox();
-            richTextBox4 = new RichTextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -76,11 +76,11 @@
             // 
             panel2.BackColor = Color.White;
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(button3);
             panel2.Controls.Add(button2);
             panel2.Controls.Add(button1);
             panel2.Controls.Add(richTextBox4);
-            panel2.Controls.Add(richTextBox1);
             panel2.Controls.Add(richTextBox3);
             panel2.Controls.Add(richTextBox2);
             panel2.Controls.Add(label5);
@@ -91,6 +91,14 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(531, 200);
             panel2.TabIndex = 2;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(196, 108);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(200, 28);
+            comboBox1.TabIndex = 7;
             // 
             // button3
             // 
@@ -126,6 +134,17 @@
             button1.TabIndex = 6;
             button1.Text = "Thêm";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // richTextBox4
+            // 
+            richTextBox4.Location = new Point(196, 154);
+            richTextBox4.Name = "richTextBox4";
+            richTextBox4.ScrollBars = RichTextBoxScrollBars.None;
+            richTextBox4.Size = new Size(200, 23);
+            richTextBox4.TabIndex = 4;
+            richTextBox4.Text = "";
+            richTextBox4.TextChanged += richTextBox3_TextChanged;
             // 
             // richTextBox3
             // 
@@ -145,6 +164,7 @@
             richTextBox2.Size = new Size(200, 23);
             richTextBox2.TabIndex = 4;
             richTextBox2.Text = "";
+            richTextBox2.TextChanged += richTextBox2_TextChanged;
             // 
             // label5
             // 
@@ -278,26 +298,6 @@
             tableLayoutPanel1.Size = new Size(531, 300);
             tableLayoutPanel1.TabIndex = 9;
             // 
-            // richTextBox1
-            // 
-            richTextBox1.Location = new Point(196, 109);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox1.Size = new Size(200, 23);
-            richTextBox1.TabIndex = 4;
-            richTextBox1.Text = "";
-            richTextBox1.TextChanged += richTextBox3_TextChanged;
-            // 
-            // richTextBox4
-            // 
-            richTextBox4.Location = new Point(196, 154);
-            richTextBox4.Name = "richTextBox4";
-            richTextBox4.ScrollBars = RichTextBoxScrollBars.None;
-            richTextBox4.Size = new Size(200, 23);
-            richTextBox4.TabIndex = 4;
-            richTextBox4.Text = "";
-            richTextBox4.TextChanged += richTextBox3_TextChanged;
-            // 
             // ModalKhuyenMai
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -309,7 +309,7 @@
             Controls.Add(panel1);
             Name = "ModalKhuyenMai";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ModalKhuyenMai";
+            Text = "Chi tiết chương trình khuyến mãi";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -340,6 +340,6 @@
         private Label label6;
         private TableLayoutPanel tableLayoutPanel1;
         private RichTextBox richTextBox4;
-        private RichTextBox richTextBox1;
+        private ComboBox comboBox1;
     }
 }

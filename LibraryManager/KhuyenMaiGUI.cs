@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using LibraryManager;
 using LibraryManager.ConnectDatabase;
 using MySql.Data.MySqlClient;
 
@@ -154,9 +155,16 @@ namespace ProjectLibraryManager
             var btn = (Button)sender;
             var promoId = btn.Tag.ToString();
 
-            // Ví dụ: hiện MessageBox hoặc mở Form chi tiết
-            MessageBox.Show("Chi tiết CT: " + promoId, "Thông tin khuyến mãi",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Mỗi lần bấm tạo một instance mới, truyền promoId vào
+            using (var modal = new ModalKhuyenMai(promoId))
+            {
+                if (modal.ShowDialog() == DialogResult.OK)
+                {
+                    // Nếu trong modal bạn đặt DialogResult = OK khi lưu,
+                    // thì sau khi đóng bạn có thể reload bảng chính:
+                    loadKhuyenMaiToTable();
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
