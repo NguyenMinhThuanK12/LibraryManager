@@ -1,4 +1,4 @@
-﻿// File: UI/QLThietBi.cs
+﻿
 using LibraryManager.Model;
 using LibraryManager.Models;
 using LibraryManager.Repository;
@@ -220,6 +220,9 @@ namespace LibraryManager.UI.QLThietBi
 
         private void DisplayDevices(List<DeviceModel> devices)
         {
+
+            if (devices == null)
+                return; // hoặc bạn có thể xử lý hiển thị danh sách rỗng
             contentTable.Controls.Clear();
             Panel headerRow = new Panel { Size = new Size(1380, 40), BackColor = Color.White };
             for (int i = 0, x = 50; i < columnHeaders.Length; i++)
