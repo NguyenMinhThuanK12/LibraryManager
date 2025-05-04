@@ -42,7 +42,7 @@ namespace LibraryManager
             }
 
             // Viết truy vấn kiểm tra tài khoản trong bảng taikhoan
-            string query = $"SELECT * FROM taikhoan WHERE VaiTro = '{username}' AND MatKhau = '{password}' AND TrangThai = 'active'";
+            string query = $"SELECT * FROM taikhoan WHERE TenTaiKhoan = '{username}' AND MatKhau = '{password}' AND TrangThai = 'active'";
 
             DataTable dt = DatabaseConnection.ExecuteSelectQuery(query);
 
