@@ -13,7 +13,7 @@ namespace LibraryManager.ConnectDatabase
     {
 
         // Chuỗi kết nối MySQL (thay thế thông tin của bạn)
-        private static string connectionString = "Server=localhost;Database=library_management;Uid=root;Pwd=123456;";
+        private static string connectionString = "Server=localhost;Database=library_management;Uid=root;Pwd=;";
 
         // Hàm mở kết nối đến cơ sở dữ liệu MySQL
         public static MySqlConnection GetConnection()

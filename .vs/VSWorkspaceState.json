@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\LibraryManager",
+    "\\LibraryManager\\ConnectDatabase"
   ],
-  "SelectedNode": "\\LibraryManager.sln",
+  "SelectedNode": "\\LibraryManager\\QLDatCho.cs",
   "PreviewInSolutionExplorer": false
 }
