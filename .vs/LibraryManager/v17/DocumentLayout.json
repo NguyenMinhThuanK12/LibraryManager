@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|C:\\Users\\CUONG\\source\\repos\\LibraryManager\\librarymanager\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\test.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\test.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\test.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\test.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -15,20 +27,12 @@
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|C:\\Users\\CUONG\\source\\repos\\LibraryManager\\librarymanager\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\test.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\test.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\cuong\\source\\repos\\librarymanager\\librarymanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,18 +102,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "test.resx",
+              "DocumentMoniker": "C:\\Users\\CUONG\\Source\\Repos\\LibraryManager\\LibraryManager\\test.resx",
+              "RelativeDocumentMoniker": "LibraryManager\\test.resx",
+              "ToolTip": "C:\\Users\\CUONG\\Source\\Repos\\LibraryManager\\LibraryManager\\test.resx",
+              "RelativeToolTip": "LibraryManager\\test.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-27T15:11:19.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "test.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\test.cs",
               "RelativeDocumentMoniker": "LibraryManager\\test.cs",
               "ToolTip": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\test.cs [Design]",
               "RelativeToolTip": "LibraryManager\\test.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T02:59:55.452Z"
+              "WhenOpened": "2025-04-14T02:59:55.452Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "QLDatCho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
@@ -121,19 +138,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QLDatCho.cs",
-              "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
-              "ToolTip": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.cs",
-              "RelativeToolTip": "LibraryManager\\QLDatCho.cs",
-              "ViewState": "AQIAAL8AAAAAAAAAAADwv8sAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T10:23:01.45Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "QLDatCho.Designer.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.Designer.cs",
@@ -146,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "DatabaseConnection.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
               "RelativeDocumentMoniker": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
@@ -158,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "test.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\test.cs",
               "RelativeDocumentMoniker": "LibraryManager\\test.cs",
@@ -170,19 +175,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "test.Designer.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\test.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\test.Designer.cs",
               "ToolTip": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\test.Designer.cs",
               "RelativeToolTip": "LibraryManager\\test.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAxwBYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T03:00:24.406Z"
+              "WhenOpened": "2025-04-14T03:00:24.406Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "QLDatCho.cs",
+              "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
+              "ToolTip": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.cs",
+              "RelativeToolTip": "LibraryManager\\QLDatCho.cs",
+              "ViewState": "AQIAAL8AAAAAAAAAAADwv8sAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T10:23:01.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\Program.cs",
               "RelativeDocumentMoniker": "LibraryManager\\Program.cs",
@@ -194,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\RegisterForm.cs",
               "RelativeDocumentMoniker": "LibraryManager\\RegisterForm.cs",
@@ -205,7 +223,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "QLViPham.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLViPham.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLViPham.cs",
@@ -216,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\LoginForm.Designer.cs",
@@ -228,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\LoginForm.cs",
               "RelativeDocumentMoniker": "LibraryManager\\LoginForm.cs",
@@ -239,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "QLPhieuNhap.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.cs",
@@ -250,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "FormThemViPham.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\FormThemViPham.cs",
               "RelativeDocumentMoniker": "LibraryManager\\FormThemViPham.cs",
@@ -261,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "FormThemPhieuNhap.cs [Design]",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\FormThemPhieuNhap.cs",
               "RelativeDocumentMoniker": "LibraryManager\\FormThemPhieuNhap.cs",
@@ -272,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "QLPhieuNhap.Designer.cs",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLPhieuNhap.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.Designer.cs",
@@ -284,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "QLDatCho.resx",
               "DocumentMoniker": "C:\\Users\\CUONG\\source\\repos\\LibraryManager\\LibraryManager\\QLDatCho.resx",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.resx",
