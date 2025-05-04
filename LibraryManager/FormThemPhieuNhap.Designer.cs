@@ -1,4 +1,4 @@
-﻿namespace MinhViLap05
+namespace LibraryManager
 {
     partial class FormThemPhieuNhap
     {
