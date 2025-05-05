@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -198,22 +198,49 @@ namespace LibraryManager.Repository
             {
                 using (MySqlConnection conn = DatabaseConnection.GetConnection())
                 {
-                    string query = "INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaSanPham, SoLuong, GiaNhap) VALUES (@MaPhieuNhap, @MaSanPham, @SoLuong, @GiaNhap)";
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@MaPhieuNhap", chiTiet.MaPhieuNhap);
-                    cmd.Parameters.AddWithValue("@MaSanPham", chiTiet.MaSanPham);
-                    cmd.Parameters.AddWithValue("@SoLuong", chiTiet.SoLuong);
-                    cmd.Parameters.AddWithValue("@GiaNhap", chiTiet.GiaNhap);
+                    // Bắt đầu transaction (đảm bảo an toàn dữ liệu)
+                    using (MySqlTransaction transaction = conn.BeginTransaction())
+                    {
+                        try
+                        {
+                            // 1. Thêm chi tiết phiếu nhập
+                            string insertQuery = "INSERT INTO ChiTietPhieuNhap (MaPhieuNhap, MaSanPham, SoLuong, GiaNhap) " +
+                                                 "VALUES (@MaPhieuNhap, @MaSanPham, @SoLuong, @GiaNhap)";
+                            using (MySqlCommand insertCmd = new MySqlCommand(insertQuery, conn, transaction))
+                            {
+                                insertCmd.Parameters.AddWithValue("@MaPhieuNhap", chiTiet.MaPhieuNhap);
+                                insertCmd.Parameters.AddWithValue("@MaSanPham", chiTiet.MaSanPham);
+                                insertCmd.Parameters.AddWithValue("@SoLuong", chiTiet.SoLuong);
+                                insertCmd.Parameters.AddWithValue("@GiaNhap", chiTiet.GiaNhap);
+                                insertCmd.ExecuteNonQuery();
+                            }
 
-                    cmd.ExecuteNonQuery();
+                            // 2. Cập nhật số lượng sản phẩm
+                            string updateQuery = "UPDATE SanPham SET SoLuong = SoLuong + @SoLuong WHERE MaSanPham = @MaSanPham";
+                            using (MySqlCommand updateCmd = new MySqlCommand(updateQuery, conn, transaction))
+                            {
+                                updateCmd.Parameters.AddWithValue("@SoLuong", chiTiet.SoLuong);
+                                updateCmd.Parameters.AddWithValue("@MaSanPham", chiTiet.MaSanPham);
+                                updateCmd.ExecuteNonQuery();
+                            }
+
+                            // Commit nếu cả hai thành công
+                            transaction.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            transaction.Rollback(); // Rollback nếu có lỗi
+                            Console.WriteLine("Lỗi trong transaction: " + ex.Message);
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi thêm chi tiết phiếu nhập: " + ex.Message);
+                Console.WriteLine("Lỗi kết nối hoặc lỗi khác: " + ex.Message);
             }
-
         }
+
 
 
 
@@ -241,6 +268,7 @@ namespace LibraryManager.Repository
                     Convert.ToInt32(row["MaTang"]),
                     row["TenSanPham"].ToString(),
                     Convert.ToInt32(row["SoLuong"]),
+                    Convert.ToDouble(row["GiaTri"]),
                     row["TrangThai"].ToString()
                     );
 
@@ -280,6 +308,7 @@ namespace LibraryManager.Repository
                                 reader.GetInt32("MaTang"),
                                 reader.GetString("TenSanPham"),
                                 reader.GetInt32("SoLuong"),
+                                reader.GetDouble("GiaTri"),
                                 reader.GetString("TrangThai")
                             );
                         }

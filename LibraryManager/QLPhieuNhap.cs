@@ -14,6 +14,33 @@ namespace MinhViLap05
             InitializeComponent();
             Repository = new PhieuNhapRepository();
             LoadData();
+
+            cbKieuTimKiem.Items.Clear(); // Xóa các mục cũ nếu có
+            cbKieuTimKiem.Items.Add("Mã phiếu nhập");
+            cbKieuTimKiem.Items.Add("Tên nhà cung cấp");
+            cbKieuTimKiem.SelectedIndex = 0; // Mặc định là Mã phiếu nhập
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
+        }
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string kieuTim = cbKieuTimKiem.SelectedItem?.ToString();
+            string tuKhoa = txtTimKiem.Text.ToLower();
+
+            List<PhieuNhapModel> danhSachGoc = Repository.GetAll();
+
+            List<PhieuNhapModel> ketQuaTimKiem = danhSachGoc.Where(pn =>
+            {
+                if (kieuTim == "Mã phiếu nhập")
+                    return pn.MaPhieuNhap.ToString().Contains(tuKhoa);
+                else if (kieuTim == "Tên nhà cung cấp")
+                {
+                    string tenNCC = Repository.GetTenNhaCungCapById(pn.MaNCC).ToLower();
+                    return tenNCC.Contains(tuKhoa);
+                }
+                return false;
+            }).ToList();
+
+            HienThiDanhSach(ketQuaTimKiem);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -53,6 +80,71 @@ namespace MinhViLap05
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void TimKiemPhieuNhap()
+        {
+            string tuKhoa = txtTimKiem.Text.Trim().ToLower();
+            string kieuTim = cbKieuTimKiem.SelectedItem?.ToString();
+
+            var danhSachGoc = Repository.GetAll();
+
+            var ketQua = danhSachGoc.Where(p =>
+            {
+                if (kieuTim == "Mã phiếu nhập")
+                {
+                    return p.MaPhieuNhap.ToString().Contains(tuKhoa);
+                }
+                else if (kieuTim == "Nhà cung cấp")
+                {
+                    string tenNCC = Repository.GetTenNhaCungCapById(p.MaNCC).ToLower();
+                    return tenNCC.Contains(tuKhoa);
+                }
+                return false;
+            }).ToList();
+
+            HienThiDanhSach(ketQua);
+        }
+        private void HienThiDanhSach(List<PhieuNhapModel> ds)
+        {
+            tbDanhSachPhieuNhap.SuspendLayout();
+            tbDanhSachPhieuNhap.Controls.Clear();
+            tbDanhSachPhieuNhap.RowStyles.Clear();
+            tbDanhSachPhieuNhap.ColumnStyles.Clear();
+
+            tbDanhSachPhieuNhap.ColumnCount = 5;
+            tbDanhSachPhieuNhap.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 15F));
+            tbDanhSachPhieuNhap.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuNhap.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuNhap.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuNhap.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
+
+            tbDanhSachPhieuNhap.RowCount = 1;
+            tbDanhSachPhieuNhap.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+            tbDanhSachPhieuNhap.Controls.Add(new Label { Text = "Mã phiếu nhập", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 0, 0);
+            tbDanhSachPhieuNhap.Controls.Add(new Label { Text = "Ngày tạo", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 1, 0);
+            tbDanhSachPhieuNhap.Controls.Add(new Label { Text = "Tổng tiền", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 2, 0);
+            tbDanhSachPhieuNhap.Controls.Add(new Label { Text = "Nhà cung cấp", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 3, 0);
+            tbDanhSachPhieuNhap.Controls.Add(new Label { Text = "Thao tác", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 4, 0);
+
+            for (int i = 0; i < ds.Count; i++)
+            {
+                var pn = ds[i];
+                int rowIndex = i + 1;
+
+                tbDanhSachPhieuNhap.RowCount++;
+                tbDanhSachPhieuNhap.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+                tbDanhSachPhieuNhap.Controls.Add(new Label { Text = pn.MaPhieuNhap.ToString(), AutoSize = true }, 0, rowIndex);
+                tbDanhSachPhieuNhap.Controls.Add(new Label { Text = pn.NgayTao.ToString("dd-MM-yyyy HH:mm:ss"), AutoSize = true }, 1, rowIndex);
+                tbDanhSachPhieuNhap.Controls.Add(new Label { Text = pn.TongTien.ToString("N0"), AutoSize = true }, 2, rowIndex);
+                tbDanhSachPhieuNhap.Controls.Add(new Label { Text = Repository.GetTenNhaCungCapById(pn.MaNCC), AutoSize = true }, 3, rowIndex);
+
+                Button btnXem = new Button { Text = "Xem", Tag = pn, AutoSize = true };
+                btnXem.Click += btnXem_Click;
+                tbDanhSachPhieuNhap.Controls.Add(btnXem, 4, rowIndex);
+            }
+
+            tbDanhSachPhieuNhap.ResumeLayout(true);
         }
 
 

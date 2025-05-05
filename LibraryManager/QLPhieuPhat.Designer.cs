@@ -31,9 +31,8 @@
             panel1 = new Panel();
             label2 = new Label();
             tbDanhSachPhieuPhat = new TableLayoutPanel();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
-            textBox1 = new TextBox();
+            cbKieuTimKiem = new ComboBox();
+            txtTimKiem = new TextBox();
             label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -43,9 +42,8 @@
             panel1.BackColor = SystemColors.Window;
             panel1.Controls.Add(label2);
             panel1.Controls.Add(tbDanhSachPhieuPhat);
-            panel1.Controls.Add(button1);
-            panel1.Controls.Add(comboBox1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(cbKieuTimKiem);
+            panel1.Controls.Add(txtTimKiem);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -81,30 +79,21 @@
             tbDanhSachPhieuPhat.Size = new Size(1223, 586);
             tbDanhSachPhieuPhat.TabIndex = 4;
             // 
-            // button1
+            // cbKieuTimKiem
             // 
-            button1.Location = new Point(745, 86);
-            button1.Name = "button1";
-            button1.Size = new Size(191, 33);
-            button1.TabIndex = 3;
-            button1.Text = "Download Excel";
-            button1.UseVisualStyleBackColor = true;
+            cbKieuTimKiem.FormattingEnabled = true;
+            cbKieuTimKiem.Items.AddRange(new object[] { "Mã Vi Phạm", "Mã Thành Viên", "Mã Quản Lý" });
+            cbKieuTimKiem.Location = new Point(573, 91);
+            cbKieuTimKiem.Name = "cbKieuTimKiem";
+            cbKieuTimKiem.Size = new Size(151, 28);
+            cbKieuTimKiem.TabIndex = 2;
             // 
-            // comboBox1
+            // txtTimKiem
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Mã Vi Phạm", "Mã Thành Viên", "Mã Quản Lý" });
-            comboBox1.Location = new Point(573, 91);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 28);
-            comboBox1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(165, 91);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(368, 27);
-            textBox1.TabIndex = 1;
+            txtTimKiem.Location = new Point(165, 91);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(368, 27);
+            txtTimKiem.TabIndex = 1;
             // 
             // label1
             // 
@@ -134,8 +123,8 @@
         private Label label2;
         private TableLayoutPanel tbDanhSachPhieuPhat;
         private Button button1;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
+        private ComboBox cbKieuTimKiem;
+        private TextBox txtTimKiem;
         private Label label1;
     }
 }

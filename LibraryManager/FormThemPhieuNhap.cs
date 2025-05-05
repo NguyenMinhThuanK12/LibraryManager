@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using LibraryManager.Repository;
 using LibraryManager.Model;
 
-namespace MinhViLap05
+namespace LibraryManager
 {
     public partial class FormThemPhieuNhap : Form
     {
@@ -83,10 +83,11 @@ namespace MinhViLap05
             tbDanhSachSP.ColumnStyles.Clear();
 
             // Thiết lập số cột và tỉ lệ
-            tbDanhSachSP.ColumnCount = 5;
-            tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12F)); // Mã sản phẩm
+            tbDanhSachSP.ColumnCount = 6;
+            tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 8F)); // Mã sản phẩm
             tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F)); // Tên sản phẩm
             tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12F)); // Số lượng
+            tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12F)); // Giá trị
             tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12F)); // Trạng thái
             tbDanhSachSP.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 12F)); // Thao tác
 
@@ -98,8 +99,9 @@ namespace MinhViLap05
             tbDanhSachSP.Controls.Add(new Label { Text = "Mã SP", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 0, headerRow);
             tbDanhSachSP.Controls.Add(new Label { Text = "Tên sản phẩm", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 1, headerRow);
             tbDanhSachSP.Controls.Add(new Label { Text = "Số lượng", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 2, headerRow);
-            tbDanhSachSP.Controls.Add(new Label { Text = "Trạng thái", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 3, headerRow);
-            tbDanhSachSP.Controls.Add(new Label { Text = "Thao tác", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 4, headerRow);
+            tbDanhSachSP.Controls.Add(new Label { Text = "Giá trị", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 3, headerRow);
+            tbDanhSachSP.Controls.Add(new Label { Text = "Trạng thái", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 4, headerRow);
+            tbDanhSachSP.Controls.Add(new Label { Text = "Thao tác", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 5, headerRow);
 
             // Lấy danh sách sản phẩm từ Repository
             List<SanPhamModel> ds = Repository.GetAllSanPham();
@@ -116,7 +118,8 @@ namespace MinhViLap05
                 tbDanhSachSP.Controls.Add(new Label { Text = sp.MaSanPham.ToString(), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 0, rowIndex);
                 tbDanhSachSP.Controls.Add(new Label { Text = sp.TenSanPham, AutoSize = true, TextAlign = ContentAlignment.MiddleLeft }, 1, rowIndex);
                 tbDanhSachSP.Controls.Add(new Label { Text = sp.SoLuong.ToString(), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 2, rowIndex);
-                tbDanhSachSP.Controls.Add(new Label { Text = sp.TrangThai, AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 3, rowIndex);
+                tbDanhSachSP.Controls.Add(new Label { Text = sp.GiaTri.ToString(), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 3, rowIndex);
+                tbDanhSachSP.Controls.Add(new Label { Text = sp.TrangThai, AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 4, rowIndex);
 
                 // Nút "Chọn" gán Tag = sp
                 Button btnChon = new Button
@@ -127,7 +130,7 @@ namespace MinhViLap05
                 };
                 btnChon.Click += btnChon_Click;
 
-                tbDanhSachSP.Controls.Add(btnChon, 4, rowIndex);
+                tbDanhSachSP.Controls.Add(btnChon, 5, rowIndex);
             }
 
             // Resume layout

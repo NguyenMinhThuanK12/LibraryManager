@@ -20,26 +20,54 @@ namespace LibraryManager
             Repository = new PhieuPhatRepository();
             InitializeComponent();
             LoadData();
+            cbKieuTimKiem.Items.Clear();
+            cbKieuTimKiem.Items.AddRange(new string[] { "Mã phiếu phạt", "Tên thành viên" });
+            cbKieuTimKiem.SelectedIndex = 0;
+            txtTimKiem.TextChanged += txtTimKiem_TextChanged;
+
         }
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            string tuKhoa = txtTimKiem.Text.Trim().ToLower();
+            string kieuTim = cbKieuTimKiem.SelectedItem?.ToString();
+
+            var danhSach = Repository.GetAllPhieuPhat();
+
+            var ketQua = danhSach.Where(pp =>
+            {
+                if (kieuTim == "Mã phiếu phạt")
+                    return pp.MaPhieuPhat.ToString().Contains(tuKhoa);
+                else if (kieuTim == "Tên thành viên")
+                {
+                    string tenTV = Repository.GetTenThanhVienByMaPhieuPhat(pp.MaPhieuPhat).ToLower();
+                    return tenTV.Contains(tuKhoa);
+                }
+                return false;
+            }).ToList();
+
+            HienThiPhieuPhat(ketQua);
+        }
+
         private void LoadData()
         {
+            var danhSach = Repository.GetAllPhieuPhat();
+            HienThiPhieuPhat(danhSach);
+        }
+        private void HienThiPhieuPhat(List<PhieuPhatModel> danhSach)
+        {
             tbDanhSachPhieuPhat.SuspendLayout();
-
-            // Xóa dữ liệu cũ
             tbDanhSachPhieuPhat.Controls.Clear();
             tbDanhSachPhieuPhat.RowStyles.Clear();
             tbDanhSachPhieuPhat.ColumnStyles.Clear();
 
-            // Thiết lập cột
             tbDanhSachPhieuPhat.ColumnCount = 6;
-            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));  // Mã phiếu phạt
-            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));  // Mã phiếu mượn
-            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));  // Ten thanh vien
-            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));  // Tổng tiền phạt
-            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));  // TrangThai
-            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));  // Thao tác
+            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            tbDanhSachPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
 
-            // Dòng tiêu đề
             tbDanhSachPhieuPhat.RowCount = 1;
             tbDanhSachPhieuPhat.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
@@ -50,9 +78,6 @@ namespace LibraryManager
             tbDanhSachPhieuPhat.Controls.Add(new Label { Text = "Trạng Thái", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 4, 0);
             tbDanhSachPhieuPhat.Controls.Add(new Label { Text = "Thao tác", Font = new Font("Segoe UI", 9, FontStyle.Bold), AutoSize = true }, 5, 0);
 
-            // Lấy dữ liệu phiếu phạt từ Repository
-            List<PhieuPhatModel> danhSach = Repository.GetAllPhieuPhat(); // Hàm này bạn cần cài đặt trong Repository
-
             tbDanhSachPhieuPhat.RowCount = danhSach.Count + 1;
 
             for (int i = 0; i < danhSach.Count; i++)
@@ -60,33 +85,20 @@ namespace LibraryManager
                 var pp = danhSach[i];
                 int rowIndex = i + 1;
 
-                // Mã phiếu phạt
                 tbDanhSachPhieuPhat.Controls.Add(new Label { Text = pp.MaPhieuPhat.ToString(), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 0, rowIndex);
-
-                // Mã phiếu mượn
                 tbDanhSachPhieuPhat.Controls.Add(new Label { Text = pp.MaPhieuMuon.ToString(), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 1, rowIndex);
-                // Mã phiếu mượn
                 tbDanhSachPhieuPhat.Controls.Add(new Label { Text = Repository.GetTenThanhVienByMaPhieuPhat(pp.MaPhieuPhat), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 2, rowIndex);
-                // Tổng tiền phạt
                 tbDanhSachPhieuPhat.Controls.Add(new Label { Text = pp.TongTienPhat.ToString("N0"), AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 3, rowIndex);
-
                 tbDanhSachPhieuPhat.Controls.Add(new Label { Text = pp.TrangThaiThanhToan, AutoSize = true, TextAlign = ContentAlignment.MiddleCenter }, 4, rowIndex);
 
-                // Nút "Xem"
                 Button btnXem = new Button { Text = "Xem", Tag = pp, AutoSize = true, TextAlign = ContentAlignment.MiddleCenter };
                 btnXem.Click += btnXemPhieuPhat_Click;
                 tbDanhSachPhieuPhat.Controls.Add(btnXem, 5, rowIndex);
             }
 
-            // Đảm bảo tự động tính chiều cao dòng
-            foreach (RowStyle rowStyle in tbDanhSachPhieuPhat.RowStyles)
-            {
-                if (rowStyle.SizeType != SizeType.AutoSize)
-                    rowStyle.SizeType = SizeType.AutoSize;
-            }
-
             tbDanhSachPhieuPhat.ResumeLayout(true);
         }
+
         private void btnXemPhieuPhat_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;

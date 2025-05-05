@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,18 +13,21 @@ namespace LibraryManager.Model
         public int MaTang { get; set; }      // Mã tầng
         public string TenSanPham { get; set; } // Tên sản phẩm
         public int SoLuong { get; set; }     // Số lượng
+
+        public double GiaTri { get; set; }
         public string TrangThai { get; set; }  // Trạng thái (ví dụ: "Còn hàng", "Hết hàng")
 
 
         // Constructor
         public SanPhamModel() { }
-        public SanPhamModel(int maSanPham, int maViTri, int maTang, string tenSanPham, int soLuong, string trangThai)
+        public SanPhamModel(int maSanPham, int maViTri, int maTang, string tenSanPham, int soLuong, double giaTri, string trangThai)
         {
             MaSanPham = maSanPham;
             MaViTri = maViTri;
             MaTang = maTang;
             TenSanPham = tenSanPham;
             SoLuong = soLuong;
+            GiaTri = giaTri;
             TrangThai = trangThai;
         }
     }
