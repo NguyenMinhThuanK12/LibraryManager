@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\modalkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\modalkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,6 +20,8 @@
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+=======
+>>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -55,6 +58,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "ModalKhuyenMai.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.cs",
               "RelativeDocumentMoniker": "LibraryManager\\ModalKhuyenMai.cs",
@@ -105,6 +109,8 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+=======
+>>>>>>> Stashed changes
               "Title": "DatabaseConnection.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
               "RelativeDocumentMoniker": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
@@ -112,7 +118,12 @@
               "RelativeToolTip": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAD4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+<<<<<<< Updated upstream
               "WhenOpened": "2025-05-02T10:32:58.716Z"
+=======
+              "WhenOpened": "2025-05-02T10:32:58.716Z",
+              "EditorCaption": ""
+>>>>>>> Stashed changes
             }
           ]
         }
