@@ -37,6 +37,11 @@
         .sidebar .btn-sidebar:hover {
             background-color: #f0f0f0;
         }
+        .sidebar .btn-sidebar.selected {
+            background-color: #34a853;
+            color: white;
+            font-weight: bold;
+        }
         .topbar {
             height: 60px;
             background-color: #fff;
@@ -46,7 +51,6 @@
             padding: 0 20px;
             border-bottom: 1px solid #ccc;
         }
-
        .logo-section img {
             width: 32px;
             height: 32px;
@@ -84,41 +88,32 @@
 </head>
 <body>
     <form id="form1" runat="server">
+         <asp:ScriptManager ID="ScriptManager1" runat="server" />
         <div class="main-layout">
             <!-- Sidebar -->
-            <div class="sidebar">
+            <div id="sidebar" runat="server" class="sidebar">
                 <div class="logo-section sidebar-logo">
                     <img src="../Content/LogoApp.png" alt="Logo" />
                     <span style="font-size: 18px; font-weight: bold;">Library App</span>
                 </div>
                 <asp:Button ID="btnDatChoMuon" runat="server" Text="📅 Đặt chỗ mượn" OnClick="btnDatChoMuon_Click" CssClass="btn btn-sidebar" />
-                <asp:Button ID="btnLichSu" runat="server" Text="📖 Lịch sử" OnClick="btnLichSu_Click" CssClass="btn btn-sidebar" />
+                <asp:Button ID="btnLichSu" runat="server" Text="📖 Phiếu mượn" OnClick="btnLichSu_Click" CssClass="btn btn-sidebar" />
+                <asp:Button ID="btnDatCho" runat="server" Text="📘 Phiếu đặt chỗ" OnClick="btnDatCho_Click" CssClass="btn btn-sidebar" />
+                <asp:Button ID="btnViPham" runat="server" Text="⚠️ Phiếu vi phạm" OnClick="btnViPham_Click" CssClass="btn btn-sidebar" />
                 <asp:Button ID="btnCaNhan" runat="server" Text="👤 Cá nhân" OnClick="btnCaNhan_Click" CssClass="btn btn-sidebar" />
-
-                <div style="flex-grow: 1;"></div> <!-- đẩy nút logout xuống dưới -->
-
+                <div style="flex-grow: 1;"></div>
                 <asp:Button ID="btnDangXuat" runat="server" Text="🚪 Đăng xuất" OnClick="btnDangXuat_Click" CssClass="btn btn-sidebar logout-btn" />
             </div>
 
             <!-- Content -->
             <div class="content">
                 <div class="topbar">
-                  <div class="topbar">
-                    <div></div>
-                    <div class="user-section" style="display: flex; align-items: center;">
-                        <img src="../Content/user.png" style="width: 30px; height: 30px; margin-right: 10px;" />
-                        <div>
-                            <strong><asp:Literal ID="litHoTen" runat="server" /></strong><br />
-                            <small><asp:Literal ID="litVaiTro" runat="server" /></small>
-                        </div>
-                    </div>
-                </div>
+                     <div></div>
                     <div style="text-align: right;">
                         <strong><%= DateTime.Now.ToString("hh:mm tt") %></strong><br />
                         <small><%= DateTime.Now.ToString("'thg' M dd, yyyy") %></small>
                     </div>
                 </div>
-
                 <div class="content-body">
                     <asp:PlaceHolder ID="ContentPlaceholder" runat="server" />
                 </div>

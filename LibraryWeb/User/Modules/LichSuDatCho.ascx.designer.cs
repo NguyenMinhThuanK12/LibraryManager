@@ -7,101 +7,74 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LibraryWeb.User
+namespace LibraryWeb.User.Modules
 {
 
 
-    public partial class TrangChu
+    public partial class LichSuDatCho
     {
 
         /// <summary>
-        /// form1 control.
+        /// txtSearchDC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtSearchDC;
 
         /// <summary>
-        /// ScriptManager1 control.
+        /// ddlTrangThaiDC control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTrangThaiDC;
 
         /// <summary>
-        /// sidebar control.
+        /// rptPhieuDatCho control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl sidebar;
+        protected global::System.Web.UI.WebControls.Repeater rptPhieuDatCho;
 
         /// <summary>
-        /// btnDatChoMuon control.
+        /// lblThoiGianDat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDatChoMuon;
+        protected global::System.Web.UI.WebControls.Label lblThoiGianDat;
 
         /// <summary>
-        /// btnLichSu control.
+        /// lblThoiGianMuon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLichSu;
+        protected global::System.Web.UI.WebControls.Label lblThoiGianMuon;
 
         /// <summary>
-        /// btnDatCho control.
+        /// lblTrangThaiDat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDatCho;
+        protected global::System.Web.UI.WebControls.Label lblTrangThaiDat;
 
         /// <summary>
-        /// btnViPham control.
+        /// rptChiTietPhieuDatCho control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnViPham;
-
-        /// <summary>
-        /// btnCaNhan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCaNhan;
-
-        /// <summary>
-        /// btnDangXuat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDangXuat;
-
-        /// <summary>
-        /// ContentPlaceholder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ContentPlaceholder;
+        protected global::System.Web.UI.WebControls.Repeater rptChiTietPhieuDatCho;
     }
 }

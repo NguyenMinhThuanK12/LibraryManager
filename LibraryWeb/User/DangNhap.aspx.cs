@@ -33,11 +33,31 @@ namespace LibraryWeb.User
                     string role = reader["VaiTro"].ToString();
                     if (!role.Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
+                        int maThanhVien = Convert.ToInt32(reader["MaThanhVien"]);
                         // Ghi nhận phiên đăng nhập 
                         Session["MaTaiKhoan"] = username;
                         Session["VaiTro"] = role;
+                        Session["MaThanhVien"] = maThanhVien;
+
+                        // Lấy tên thành viên từ bảng thanhvien
+                        reader.Close(); // phải đóng reader trước khi tạo command mới
+
+                        string query2 = "SELECT MaThanhVien, HoTen FROM thanhvien WHERE MaThanhVien = @maTV";
+                        using (MySqlCommand cmd2 = new MySqlCommand(query2, conn))
+                        {
+                            cmd2.Parameters.AddWithValue("@maTV", maThanhVien);
+                            using (var reader2 = cmd2.ExecuteReader())
+                            {
+                                if (reader2.Read())
+                                {
+                                  
+                                    Session["TenThanhVien"] = reader2["HoTen"];
+                                }
+                            }
+                        }
 
                         Response.Redirect("TrangChu.aspx");
+                      
                     }
                     else
                     {

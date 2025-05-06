@@ -200,8 +200,11 @@
     <Content Include="Site.Master" />
     <Content Include="User\DangKy.aspx" />
     <Content Include="User\DangNhap.aspx" />
-    <Content Include="User\DatCho.aspx" />
-    <Content Include="User\Profile.aspx" />
+    <Content Include="User\Modules\CaNhan.ascx" />
+    <Content Include="User\Modules\DatChoMuon.ascx" />
+    <Content Include="User\Modules\LichSuDatCho.ascx" />
+    <Content Include="User\Modules\LichSuMuon.ascx" />
+    <Content Include="User\Modules\LichSuViPham.ascx" />
     <Content Include="User\TrangChu.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -235,19 +238,40 @@
     <Compile Include="User\DangNhap.aspx.designer.cs">
       <DependentUpon>DangNhap.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User\DatCho.aspx.cs">
-      <DependentUpon>DatCho.aspx</DependentUpon>
+    <Compile Include="User\Modules\CaNhan.ascx.cs">
+      <DependentUpon>CaNhan.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\DatCho.aspx.designer.cs">
-      <DependentUpon>DatCho.aspx</DependentUpon>
+    <Compile Include="User\Modules\CaNhan.ascx.designer.cs">
+      <DependentUpon>CaNhan.ascx</DependentUpon>
     </Compile>
-    <Compile Include="User\Profile.aspx.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+    <Compile Include="User\Modules\DatChoMuon.ascx.cs">
+      <DependentUpon>DatChoMuon.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="User\Profile.aspx.designer.cs">
-      <DependentUpon>Profile.aspx</DependentUpon>
+    <Compile Include="User\Modules\DatChoMuon.ascx.designer.cs">
+      <DependentUpon>DatChoMuon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Modules\LichSuDatCho.ascx.cs">
+      <DependentUpon>LichSuDatCho.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Modules\LichSuDatCho.ascx.designer.cs">
+      <DependentUpon>LichSuDatCho.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Modules\LichSuMuon.ascx.cs">
+      <DependentUpon>LichSuMuon.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Modules\LichSuMuon.ascx.designer.cs">
+      <DependentUpon>LichSuMuon.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Modules\LichSuViPham.ascx.cs">
+      <DependentUpon>LichSuViPham.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Modules\LichSuViPham.ascx.designer.cs">
+      <DependentUpon>LichSuViPham.ascx</DependentUpon>
     </Compile>
     <Compile Include="User\TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
@@ -260,7 +284,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controls\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
