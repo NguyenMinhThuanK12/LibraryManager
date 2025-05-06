@@ -47,7 +47,7 @@ namespace LibraryWeb.User.Modules
                         SELECT MaPhieuMuon FROM phieumuon WHERE MaThanhVien = @maTV
                     )
                     AND (@keyword = '' OR MaPhieuPhat LIKE CONCAT('%', @keyword, '%'))
-                    AND (@trangThai = '' OR TrangThai = @trangThai)
+                    AND (@trangThai = '' OR TrangThaiThanhToan = @trangThai)
                     ORDER BY NgayTao DESC";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);

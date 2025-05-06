@@ -1,4 +1,4 @@
-﻿using muon.ConnectDatabase;
+﻿using LibraryManager.ConnectDatabase;
 using System.Data;
 
 namespace muon
@@ -31,8 +31,8 @@ namespace muon
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label1 = new Label();
             tboxsearch = new TextBox();
             button1 = new Button();
@@ -62,7 +62,7 @@ namespace muon
             label1.Location = new Point(36, 26);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(317, 32);
+            label1.Size = new Size(394, 41);
             label1.TabIndex = 0;
             label1.Text = "Quản Lý Mượn Trả Thiết Bị";
             label1.Click += label1_Click;
@@ -135,7 +135,7 @@ namespace muon
             label3.AutoSize = true;
             label3.Location = new Point(831, 97);
             label3.Name = "label3";
-            label3.Size = new Size(53, 25);
+            label3.Size = new Size(67, 32);
             label3.TabIndex = 23;
             label3.Text = "Đến:";
             label3.Click += label3_Click_1;
@@ -145,7 +145,7 @@ namespace muon
             label15.AutoSize = true;
             label15.Location = new Point(562, 97);
             label15.Name = "label15";
-            label15.Size = new Size(128, 25);
+            label15.Size = new Size(163, 32);
             label15.TabIndex = 22;
             label15.Text = "Tổng tiền từ:";
             label15.Click += label15_Click;
@@ -154,14 +154,14 @@ namespace muon
             // 
             tboxto.Location = new Point(890, 94);
             tboxto.Name = "tboxto";
-            tboxto.Size = new Size(100, 33);
+            tboxto.Size = new Size(100, 39);
             tboxto.TabIndex = 18;
             // 
             // tboxfrom
             // 
             tboxfrom.Location = new Point(705, 94);
             tboxfrom.Name = "tboxfrom";
-            tboxfrom.Size = new Size(100, 33);
+            tboxfrom.Size = new Size(100, 39);
             tboxfrom.TabIndex = 17;
             tboxfrom.TextChanged += textBox2_TextChanged;
             // 
@@ -180,26 +180,27 @@ namespace muon
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.Location = new Point(38, 207);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(1197, 381);
             dataGridView1.TabIndex = 10;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
@@ -210,7 +211,7 @@ namespace muon
             label11.AutoSize = true;
             label11.Location = new Point(352, 97);
             label11.Name = "label11";
-            label11.Size = new Size(48, 25);
+            label11.Size = new Size(60, 32);
             label11.TabIndex = 9;
             label11.Text = "Lọc:";
             // 
@@ -219,7 +220,7 @@ namespace muon
             cboboxfilter.FormattingEnabled = true;
             cboboxfilter.Location = new Point(416, 94);
             cboboxfilter.Name = "cboboxfilter";
-            cboboxfilter.Size = new Size(124, 33);
+            cboboxfilter.Size = new Size(124, 40);
             cboboxfilter.TabIndex = 8;
             // 
             // comboBox1
@@ -229,7 +230,7 @@ namespace muon
             comboBox1.Location = new Point(1560, 175);
             comboBox1.Margin = new Padding(5);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(279, 29);
+            comboBox1.Size = new Size(279, 36);
             comboBox1.TabIndex = 7;
             comboBox1.Text = "Lọc theo";
             // 
@@ -253,23 +254,22 @@ namespace muon
             label2.Location = new Point(478, 4);
             label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(265, 31);
+            label2.Size = new Size(336, 40);
             label2.TabIndex = 0;
             label2.Text = "Danh Sách Phiếu Mượn";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // QLMuonTraGUI
             // 
-            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleDimensions = new SizeF(14F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1284, 711);
             Controls.Add(panel1);
             Controls.Add(label1);
             Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Margin = new Padding(5);
             Name = "QLMuonTraGUI";
             RightToLeft = RightToLeft.No;
-            Text = "Form1";
+            Size = new Size(1284, 711);
             Load += QLMuonTraGUI_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

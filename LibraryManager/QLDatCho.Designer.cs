@@ -110,6 +110,7 @@ namespace LibraryManager
             panel1.Name = "panel1";
             panel1.Size = new Size(1228, 73);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
@@ -256,10 +257,10 @@ namespace LibraryManager
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             tableDatCho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             tableDatCho.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tableDatCho.Location = new Point(0, 0);
+            tableDatCho.Location = new Point(0, 3);
             tableDatCho.Name = "tableDatCho";
             tableDatCho.RowHeadersWidth = 51;
-            tableDatCho.Size = new Size(928, 474);
+            tableDatCho.Size = new Size(910, 474);
             tableDatCho.TabIndex = 4;
             tableDatCho.CellClick += tableDatCho_CellClick;
             tableDatCho.CellContentClick += tableDatCho_CellContentClick;

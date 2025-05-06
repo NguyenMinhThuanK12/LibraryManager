@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using muon.ConnectDatabase;
+using LibraryManager.ConnectDatabase;
 using MySql.Data.MySqlClient;
 
 namespace muon

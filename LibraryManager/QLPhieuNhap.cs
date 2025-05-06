@@ -3,7 +3,7 @@ using LibraryManager;
 using LibraryManager.Repository;
 using LibraryManager.Model;
 
-namespace MinhViLap05
+namespace LibraryManager
 {
     public partial class QLPhieuNhap : UserControl
     {

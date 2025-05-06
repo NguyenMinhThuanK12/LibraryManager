@@ -1,10 +1,10 @@
-﻿using muon.ConnectDatabase;
+﻿using LibraryManager.ConnectDatabase;
 using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace muon
 {
-    public partial class QLMuonTraGUI : Form
+    public partial class QLMuonTraGUI : UserControl
     {
         private DataTable _dtPhieuMuon;
         public QLMuonTraGUI()

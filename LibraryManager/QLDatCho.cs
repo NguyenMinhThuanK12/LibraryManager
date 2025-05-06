@@ -167,7 +167,7 @@ namespace LibraryManager
                 // Truyền dữ liệu từ hàng đang chọn vào các control
                 txtMaPhieu.Text = row.Cells["MaPhieu"].Value.ToString();
                 txtMaThanhVien.Text = row.Cells["MaThanhVien"].Value.ToString();
-               
+
                 txtSoLuong.Text = row.Cells["SoLuong"].Value.ToString();
 
 
@@ -184,7 +184,7 @@ namespace LibraryManager
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtMaPhieu.Text) || cbTrangThai.SelectedIndex == -1 || string.IsNullOrWhiteSpace(txtMaThanhVien.Text) 
+            if (string.IsNullOrWhiteSpace(txtMaPhieu.Text) || cbTrangThai.SelectedIndex == -1 || string.IsNullOrWhiteSpace(txtMaThanhVien.Text)
                 || string.IsNullOrWhiteSpace(txtSoLuong.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin trước khi cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -219,7 +219,7 @@ namespace LibraryManager
                         {
                             MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LoadDataToGrid();   // Load lại bảng
-                                 // Reset form về chế độ mặc định
+                                                // Reset form về chế độ mặc định
                         }
                         else
                         {
@@ -232,6 +232,11 @@ namespace LibraryManager
             {
                 MessageBox.Show("Lỗi khi cập nhật: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

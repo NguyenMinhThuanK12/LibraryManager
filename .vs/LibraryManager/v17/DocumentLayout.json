@@ -3,92 +3,119 @@
   "WorkspaceRootPath": "D:\\Projects\\LibraryManager\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\lichsudatcho.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsudatcho.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qldatcho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\lichsumuon.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsumuon.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\lichsumuon.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsumuon.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\lichsuvipham.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsuvipham.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\canhan.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\canhan.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\canhan.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\canhan.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\lichsuvipham.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsuvipham.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\datchomuon.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\datchomuon.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\datchomuon.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\datchomuon.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\lichsudatcho.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsudatcho.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\datchomuon.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\datchomuon.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\trangchu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\trangchu.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\lichsudatcho.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsudatcho.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\trangchu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\trangchu.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\modules\\canhan.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\canhan.ascx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\dangnhap.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\dangnhap.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\dangky.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\dangky.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\dangky.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\dangky.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\user\\dangnhap.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\dangnhap.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\librarymanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\librarymanager.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\dao\\thanhviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\dao\\thanhviendao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\repository\\devicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\repository\\devicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|D:\\Projects\\LibraryManager\\libraryweb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qlthanhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlthanhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\qlthanhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlthanhvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qlthanhvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlthanhvien.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\qlphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qlphieuphat.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlphieuphat.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qlphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\.nuget\\packages\\epplus\\8.0.3\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qlphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\qlphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlphieunhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\bus\\thanhvienbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\bus\\thanhvienbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\dto\\thanhviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\dto\\thanhviendto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\ui\\qlthietbi\\qlthietbi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\ui\\qlthietbi\\qlthietbi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\ui\\qlthietbi\\qlthietbi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\ui\\qlthietbi\\qlthietbi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\formxemchitietphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\formxemchitietphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\repository\\phieunhaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\repository\\phieunhaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\themphieumuongui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\themphieumuongui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\thongke.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\formxemchitietphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\formxemchitietphieuphat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qlphieunhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qlphieunhap.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,7 +125,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,284 +153,349 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LichSuViPham.ascx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "QLDatCho.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.cs",
+              "RelativeToolTip": "LibraryManager\\QLDatCho.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAArwOwAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T09:16:25.029Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "LichSuDatCho.ascx.designer.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.designer.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.designer.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.designer.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T03:45:04.966Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LichSuViPham.ascx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuViPham.ascx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuViPham.ascx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuViPham.ascx",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuViPham.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-06T03:42:40.244Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "LichSuDatCho.ascx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwDUAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T03:37:20.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LichSuDatCho.ascx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-06T03:37:06.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LichSuMuon.ascx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuMuon.ascx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuMuon.ascx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuMuon.ascx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuMuon.ascx.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAmwHcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T16:40:53.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DangKy.aspx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangKy.aspx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\DangKy.aspx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangKy.aspx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\DangKy.aspx.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAgwGwAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:10:14.977Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DatChoMuon.ascx.designer.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx.designer.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx.designer.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx.designer.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx.designer.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T07:34:26.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LibraryManager.csproj",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\LibraryManager.csproj",
-              "RelativeDocumentMoniker": "LibraryManager\\LibraryManager.csproj",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\LibraryManager.csproj",
-              "RelativeToolTip": "LibraryManager\\LibraryManager.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-05T07:16:32.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DangNhap.aspx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangNhap.aspx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\DangNhap.aspx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangNhap.aspx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\DangNhap.aspx.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwCQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T07:11:34.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DeviceRepository.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\DeviceRepository.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\Repository\\DeviceRepository.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\DeviceRepository.cs",
-              "RelativeToolTip": "LibraryManager\\Repository\\DeviceRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T03:37:31.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\Web.config",
-              "RelativeDocumentMoniker": "LibraryWeb\\Web.config",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\Web.config",
-              "RelativeToolTip": "LibraryWeb\\Web.config",
-              "ViewState": "AgIAACAAAAAAAAAAAAAswDsAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-04T16:34:18.285Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatChoMuon.ascx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T16:30:31.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DangNhap.aspx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangNhap.aspx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\DangNhap.aspx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangNhap.aspx",
-              "RelativeToolTip": "LibraryWeb\\User\\DangNhap.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-04T15:06:15.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CaNhan.ascx.designer.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\CaNhan.ascx.designer.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\CaNhan.ascx.designer.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\CaNhan.ascx.designer.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\CaNhan.ascx.designer.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T15:14:52.73Z",
+              "WhenOpened": "2025-05-06T13:47:56.722Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CaNhan.ascx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\CaNhan.ascx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\CaNhan.ascx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\CaNhan.ascx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\CaNhan.ascx.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAAAHEAAAAtAAAAAAAAAA==",
+              "Title": "ThanhVienDAO.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "RelativeToolTip": "LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAAI4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T15:14:51.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T12:17:34.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "QLThanhVien.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\QLThanhVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:45:12.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QLDatCho.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\QLDatCho.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:38:47.385Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CaNhan.ascx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\CaNhan.ascx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\CaNhan.ascx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\CaNhan.ascx",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\CaNhan.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-04T15:12:54.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LichSuMuon.ascx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuMuon.ascx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuMuon.ascx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuMuon.ascx",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuMuon.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-04T15:12:37.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DatChoMuon.ascx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
-              "RelativeToolTip": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2025-05-04T15:12:03.488Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TrangChu.aspx.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\TrangChu.aspx.cs",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\TrangChu.aspx.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\TrangChu.aspx.cs",
-              "RelativeToolTip": "LibraryWeb\\User\\TrangChu.aspx.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAA+wDoAAABLAAAAAAAAAA==",
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T14:59:07.245Z"
+              "WhenOpened": "2025-05-06T11:36:50.208Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs",
+              "RelativeToolTip": "LibraryManager\\MainForm.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAuwNoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:36:53.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "QLDatCho.Designer.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.Designer.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
+              "RelativeToolTip": "LibraryManager\\QLDatCho.Designer.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAkwAYBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:38:51.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QLThanhVien.Designer.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.Designer.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.Designer.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.Designer.cs",
+              "RelativeToolTip": "LibraryManager\\QLThanhVien.Designer.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwEAAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:45:15.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "QLThanhVien.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs",
+              "RelativeToolTip": "LibraryManager\\QLThanhVien.cs",
+              "ViewState": "AgIAADwBAAAAAAAAAAAqwEcBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:46:31.407Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DeviceRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\DeviceRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\Repository\\DeviceRepository.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\DeviceRepository.cs",
+              "RelativeToolTip": "LibraryManager\\Repository\\DeviceRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:20:09.194Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "TrangChu.aspx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\TrangChu.aspx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\TrangChu.aspx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\TrangChu.aspx",
-              "RelativeToolTip": "LibraryWeb\\User\\TrangChu.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-04T14:51:40.6Z",
-              "EditorCaption": ""
+              "Title": "QLPhieuPhat.Designer.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.Designer.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLPhieuPhat.Designer.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.Designer.cs",
+              "RelativeToolTip": "LibraryManager\\QLPhieuPhat.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:43:25.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "readme.txt",
+              "DocumentMoniker": "C:\\Users\\ASUS\\.nuget\\packages\\epplus\\8.0.3\\readme.txt",
+              "ToolTip": "C:\\Users\\ASUS\\.nuget\\packages\\epplus\\8.0.3\\readme.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-06T12:31:35.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "QLPhieuPhat.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLPhieuPhat.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.cs",
+              "RelativeToolTip": "LibraryManager\\QLPhieuPhat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:05:41.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "QLPhieuNhap.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs",
+              "RelativeToolTip": "LibraryManager\\QLPhieuNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:39:34.611Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ThanhVienBUS.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\BUS\\ThanhVienBUS.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\BUS\\ThanhVienBUS.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\BUS\\ThanhVienBUS.cs",
+              "RelativeToolTip": "LibraryManager\\BUS\\ThanhVienBUS.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:02:16.393Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "DangKy.aspx",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangKy.aspx",
-              "RelativeDocumentMoniker": "LibraryWeb\\User\\DangKy.aspx",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\DangKy.aspx",
-              "RelativeToolTip": "LibraryWeb\\User\\DangKy.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-04T14:51:32.352Z",
+              "Title": "ThanhVienDTO.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\DTO\\ThanhVienDTO.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\DTO\\ThanhVienDTO.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\DTO\\ThanhVienDTO.cs",
+              "RelativeToolTip": "LibraryManager\\DTO\\ThanhVienDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:24:14.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "QLThietBi.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
+              "RelativeToolTip": "LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
+              "ViewState": "AgIAAMMAAAAAAAAAAAA7wAgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:19:11.919Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\LoginForm.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\LoginForm.cs",
+              "RelativeToolTip": "LibraryManager\\LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:08:48.169Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PhieuNhapRepository.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\PhieuNhapRepository.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\Repository\\PhieuNhapRepository.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\PhieuNhapRepository.cs",
+              "RelativeToolTip": "LibraryManager\\Repository\\PhieuNhapRepository.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAA2wJ4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:41:00.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FormXemChiTietPhieuPhat.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\FormXemChiTietPhieuPhat.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\FormXemChiTietPhieuPhat.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\FormXemChiTietPhieuPhat.cs",
+              "RelativeToolTip": "LibraryManager\\FormXemChiTietPhieuPhat.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:40:52.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "QLPhieuNhap.Designer.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.Designer.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.Designer.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.Designer.cs",
+              "RelativeToolTip": "LibraryManager\\QLPhieuNhap.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:38:34.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "QLPhieuPhat.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLPhieuPhat.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\QLPhieuPhat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:42:14.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "QLPhieuNhap.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\QLPhieuNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:37:29.043Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "QLThietBi.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\UI\\QLThietBi\\QLThietBi.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\UI\\QLThietBi\\QLThietBi.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:19:09.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegisterForm.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\RegisterForm.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\RegisterForm.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\RegisterForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:14:24.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\LoginForm.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\LoginForm.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:08:43.784Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormXemChiTietPhieuPhat.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\FormXemChiTietPhieuPhat.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\FormXemChiTietPhieuPhat.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\FormXemChiTietPhieuPhat.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\FormXemChiTietPhieuPhat.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:08:45.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ThemPhieuMuonGUI.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\ThemPhieuMuonGUI.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\ThemPhieuMuonGUI.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\ThemPhieuMuonGUI.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\ThemPhieuMuonGUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:42:08.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ThongKe.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongKe.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\ThongKe.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongKe.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\ThongKe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:42:08.617Z"
             }
           ]
         }

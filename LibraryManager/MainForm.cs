@@ -5,6 +5,8 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using LibraryManager.UI;
 using LibraryManager.UI.QLThietBi;
+using muon;
+
 
 
 namespace LibraryManager
@@ -208,14 +210,17 @@ namespace LibraryManager
             if (string.Equals(module, "Tổng quan", StringComparison.OrdinalIgnoreCase))
             {
                 //  mở giao diện Tổng quan
+                control = new ThongKe();
             }
             else if (string.Equals(module, "Thành viên", StringComparison.OrdinalIgnoreCase))
             {
                 // mở giao diện Thành viên
+                control = new QLThanhVien();
             }
             else if (string.Equals(module, "Phiếu mượn", StringComparison.OrdinalIgnoreCase))
             {
                 //  mở giao diện Phiếu mượn
+                control = new QLMuonTraGUI();
             }
             else if (string.Equals(module, "Thiết bị", StringComparison.OrdinalIgnoreCase))
             {
@@ -231,6 +236,7 @@ namespace LibraryManager
             else if (string.Equals(module, "Vi phạm", StringComparison.OrdinalIgnoreCase))
             {
                 // mở giao diện Vi phạm
+                control = new QLPhieuPhat();
             }
             else if (string.Equals(module, "Giảm giá", StringComparison.OrdinalIgnoreCase))
             {
@@ -239,7 +245,8 @@ namespace LibraryManager
             else if (string.Equals(module, "Phiếu nhập", StringComparison.OrdinalIgnoreCase))
             {
                 //  mở giao diện Phiếu nhập
-              
+                control = new QLPhieuNhap();
+
             }
             else if (string.Equals(module, "Đăng xuất", StringComparison.OrdinalIgnoreCase))
             {

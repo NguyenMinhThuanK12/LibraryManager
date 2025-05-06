@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.Model;
-using MinhViLap05;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 using LibraryManager.ConnectDatabase;
