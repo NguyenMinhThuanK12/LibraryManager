@@ -12,7 +12,9 @@ namespace LibraryManager.ConnectDatabase
     internal class DatabaseConnection
     {
 
+
         // Chuỗi kết nối MySQL
+
         private static string connectionString = "Server=localhost;Database=library_management;Uid=root;Pwd=;";
 
         // Hàm mở kết nối đến cơ sở dữ liệu MySQL
