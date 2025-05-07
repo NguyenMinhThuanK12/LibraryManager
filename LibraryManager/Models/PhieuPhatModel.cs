@@ -14,5 +14,22 @@ namespace LibraryManager.Model
         public DateTime NgayTao { get; set; }
 
         public String TrangThaiThanhToan { get; set; }
+
+        public PhieuPhatModel() { }
+        public PhieuPhatModel(int maPhieuPhat, int maPhieuMuon, double tongTienPhat, DateTime ngayTao, string trangThaiThanhToan)
+        {
+            MaPhieuPhat = maPhieuPhat;
+            MaPhieuMuon = maPhieuMuon;
+            TongTienPhat = tongTienPhat;
+            NgayTao = ngayTao;
+            TrangThaiThanhToan = trangThaiThanhToan;
+        }
+        public PhieuPhatModel(int maPhieuPhat, int maPhieuMuon, double tongTienPhat, string trangThaiThanhToan)
+        {
+            MaPhieuPhat = maPhieuPhat;
+            MaPhieuMuon = maPhieuMuon;
+            TongTienPhat = tongTienPhat;
+            TrangThaiThanhToan = trangThaiThanhToan;
+        }
     }
 }

@@ -72,12 +72,12 @@ namespace LibraryManager.Repository
                     }
                 }
 
-                MessageBox.Show("Thêm phiếu phạt thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Thêm phiếu phạt thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi thêm phiếu phạt: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("PhieuPhatRepo: Lỗi khi thêm phiếu phạt: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
