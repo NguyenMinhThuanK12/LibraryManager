@@ -114,7 +114,7 @@
                             <td><%# Eval("MaPhieuPhat") %></td>
                             <td><%# Eval("MaPhieuMuon") %></td>
                             <td><%# Eval("NgayTao", "{0:dd/MM/yyyy HH:mm}") %></td>
-                            <td><%# Eval("TrangThai") %></td>
+                            <td><%# Eval("TrangThaiThanhToan") %></td>
                         </tr>
                 </ItemTemplate>
                 <FooterTemplate>

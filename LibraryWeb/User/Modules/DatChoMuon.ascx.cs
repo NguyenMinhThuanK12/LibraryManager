@@ -180,7 +180,7 @@ namespace LibraryWeb.User.Modules
 
                     using (MySqlCommand cmd = new MySqlCommand(@"
                 INSERT INTO phieudatcho (MaThanhVien, MaSanPham, SoLuong, ThoiGianDat, ThoiGianMuonDuKien, TrangThaiDat)
-                VALUES (@maTV, @maSP, @soLuong, @now, @ngayMuon, 'Chờ duyệt')", conn))
+                VALUES (@maTV, @maSP, @soLuong, @now, @ngayMuon, 'Đang xử lý')", conn))
                     {
                         cmd.Parameters.AddWithValue("@maTV", maTV);
                         cmd.Parameters.AddWithValue("@maSP", maSP);

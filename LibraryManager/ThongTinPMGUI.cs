@@ -159,10 +159,9 @@ using MySql.Data.MySqlClient;
 
             string[] parts = tboxdayleft.Text.Split(' ');
             int daysLate = 0;
-            if (parts.Length >= 2 && int.TryParse(parts[0], out int x))
-            {
-                daysLate = tboxdayleft.Text.StartsWith("Quá hạn") ? x : 0;
-            }
+            var txt = tboxdayleft.Text.Trim().Split(' ');
+            if (txt.Length >= 3 && txt[0] == "Quá" && txt[1] == "hạn" && int.TryParse(txt[2], out int n))
+                daysLate = n;
 
             foreach (DataGridViewRow r in dataGridView1.Rows)
             {

@@ -99,7 +99,6 @@
                             <th>Tên thiết bị</th>
                             <th>Thể loại</th>
                             <th>Vị trí</th>
-                            <th>Giá mượn</th>
                             <th>Hành động</th>
                         </tr>
                     </thead>
@@ -111,7 +110,6 @@
                     <td><%# Eval("TenSanPham") %></td>
                     <td><%# Eval("TenTL") %></td>
                     <td><%# Eval("ViTri") %></td>
-                    <td>5000/ngày</td>
                     <td>
                         <asp:LinkButton ID="btnChon" runat="server" CommandArgument='<%# Eval("MaSanPham") + "|" + Eval("TenSanPham") %>' OnCommand="btnChon_Command">Chọn</asp:LinkButton>
                     </td>

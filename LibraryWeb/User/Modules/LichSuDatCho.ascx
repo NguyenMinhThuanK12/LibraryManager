@@ -78,7 +78,7 @@
                 <asp:TextBox ID="txtSearchDC" runat="server" AutoPostBack="true" OnTextChanged="txtSearchDC_TextChanged" Placeholder="🔍 Tìm kiếm theo ID phiếu đặt" />
                 <asp:DropDownList ID="ddlTrangThaiDC" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlTrangThaiDC_SelectedIndexChanged">
                     <asp:ListItem Text="Tất cả" Value="" />
-                    <asp:ListItem Text="Chờ duyệt" Value="Chờ duyệt" />
+                    <asp:ListItem Text="Đang xử lý" Value="Đang xử lý" />
                     <asp:ListItem Text="Đã xác nhận" Value="Đã xác nhận" />
                     <asp:ListItem Text="Đã huỷ" Value="Đã huỷ" />
                 </asp:DropDownList>

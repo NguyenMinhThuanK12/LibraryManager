@@ -3,16 +3,44 @@
   "WorkspaceRootPath": "D:\\Projects\\LibraryManager\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\lichsudatcho.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsudatcho.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\lichsudatcho.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsudatcho.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\datchomuon.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\datchomuon.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\datchomuon.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
+      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\datchomuon.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|d:\\projects\\librarymanager\\libraryweb\\user\\modules\\lichsuvipham.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86F11FFA-0D8D-4839-BEB7-6C10761319EC}|LibraryWeb\\LibraryWeb.csproj|solutionrelative:libraryweb\\user\\modules\\lichsuvipham.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\thongtinpmgui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\thongtinpmgui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\thongtinpmgui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\thongtinpmgui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qldatcho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|D:\\Projects\\LibraryManager\\librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\qldatcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|d:\\projects\\librarymanager\\librarymanager\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -125,7 +153,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -152,8 +180,90 @@
               "Name": "ST:19:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LichSuDatCho.ascx.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
+              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
+              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAqwFwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T00:50:33.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DatChoMuon.ascx.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
+              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
+              "RelativeToolTip": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx.cs",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAqwLkAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T00:38:22.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatChoMuon.ascx",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
+              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
+              "RelativeToolTip": "LibraryWeb\\User\\Modules\\DatChoMuon.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-05-07T00:37:10.286Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "LichSuDatCho.ascx",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
+              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
+              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuDatCho.ascx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
+              "WhenOpened": "2025-05-07T00:37:05.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LichSuViPham.ascx.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
+              "RelativeDocumentMoniker": "LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
+              "RelativeToolTip": "LibraryWeb\\User\\Modules\\LichSuViPham.ascx.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAIwDIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T00:08:55.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ThongTinPMGUI.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongTinPMGUI.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\ThongTinPMGUI.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongTinPMGUI.cs",
+              "RelativeToolTip": "LibraryManager\\ThongTinPMGUI.cs",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAIwMIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T13:56:39.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "QLDatCho.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
@@ -166,30 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ThanhVienDAO.cs",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\DAO\\ThanhVienDAO.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\DAO\\ThanhVienDAO.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\DAO\\ThanhVienDAO.cs",
-              "RelativeToolTip": "LibraryManager\\DAO\\ThanhVienDAO.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAAI4AAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:17:34.453Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "QLThanhVien.cs [Design]",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs [Design]",
-              "RelativeToolTip": "LibraryManager\\QLThanhVien.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:45:12.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "QLDatCho.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.cs",
@@ -201,19 +288,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
-              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs [Design]",
-              "RelativeToolTip": "LibraryManager\\MainForm.cs [Design]",
+              "DocumentIndex": 12,
+              "Title": "ThanhVienDAO.cs",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "RelativeToolTip": "LibraryManager\\DAO\\ThanhVienDAO.cs",
+              "ViewState": "AgIAAKgAAAAAAAAAAAAAAI4AAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:36:50.208Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-06T12:17:34.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs",
               "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
@@ -226,24 +313,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "QLDatCho.Designer.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLDatCho.Designer.cs",
               "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLDatCho.Designer.cs",
               "RelativeToolTip": "LibraryManager\\QLDatCho.Designer.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAkwAYBAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAkwBoBAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-06T11:38:51.067Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "QLThanhVien.Designer.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.Designer.cs",
@@ -255,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
               "Title": "QLThanhVien.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.cs",
@@ -263,11 +346,12 @@
               "RelativeToolTip": "LibraryManager\\QLThanhVien.cs",
               "ViewState": "AgIAADwBAAAAAAAAAAAqwEcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:46:31.407Z"
+              "WhenOpened": "2025-05-06T12:46:31.407Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "DeviceRepository.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\DeviceRepository.cs",
               "RelativeDocumentMoniker": "LibraryManager\\Repository\\DeviceRepository.cs",
@@ -279,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "QLPhieuPhat.Designer.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuPhat.Designer.cs",
@@ -291,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "readme.txt",
               "DocumentMoniker": "C:\\Users\\ASUS\\.nuget\\packages\\epplus\\8.0.3\\readme.txt",
               "ToolTip": "C:\\Users\\ASUS\\.nuget\\packages\\epplus\\8.0.3\\readme.txt",
@@ -301,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "QLPhieuPhat.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuPhat.cs",
@@ -309,11 +393,12 @@
               "RelativeToolTip": "LibraryManager\\QLPhieuPhat.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T12:05:41.471Z"
+              "WhenOpened": "2025-05-06T12:05:41.471Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "QLPhieuNhap.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.cs",
@@ -321,11 +406,12 @@
               "RelativeToolTip": "LibraryManager\\QLPhieuNhap.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:39:34.611Z"
+              "WhenOpened": "2025-05-06T11:39:34.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "ThanhVienBUS.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\BUS\\ThanhVienBUS.cs",
               "RelativeDocumentMoniker": "LibraryManager\\BUS\\ThanhVienBUS.cs",
@@ -337,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "ThanhVienDTO.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\DTO\\ThanhVienDTO.cs",
               "RelativeDocumentMoniker": "LibraryManager\\DTO\\ThanhVienDTO.cs",
@@ -349,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "QLThietBi.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
               "RelativeDocumentMoniker": "LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
@@ -362,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\LoginForm.cs",
               "RelativeDocumentMoniker": "LibraryManager\\LoginForm.cs",
@@ -375,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "PhieuNhapRepository.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\Repository\\PhieuNhapRepository.cs",
               "RelativeDocumentMoniker": "LibraryManager\\Repository\\PhieuNhapRepository.cs",
@@ -387,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "FormXemChiTietPhieuPhat.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\FormXemChiTietPhieuPhat.cs",
               "RelativeDocumentMoniker": "LibraryManager\\FormXemChiTietPhieuPhat.cs",
@@ -395,11 +481,12 @@
               "RelativeToolTip": "LibraryManager\\FormXemChiTietPhieuPhat.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T11:40:52.535Z"
+              "WhenOpened": "2025-05-06T11:40:52.535Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 35,
               "Title": "QLPhieuNhap.Designer.cs",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.Designer.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.Designer.cs",
@@ -411,7 +498,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "ThongTinPMGUI.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongTinPMGUI.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\ThongTinPMGUI.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongTinPMGUI.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\ThongTinPMGUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T13:56:36.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "QLThanhVien.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\QLThanhVien.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\QLThanhVien.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\QLThanhVien.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T12:45:12.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\MainForm.cs",
+              "ToolTip": "D:\\Projects\\LibraryManager\\LibraryManager\\MainForm.cs [Design]",
+              "RelativeToolTip": "LibraryManager\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:36:50.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "QLPhieuPhat.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuPhat.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuPhat.cs",
@@ -422,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "QLPhieuNhap.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\QLPhieuNhap.cs",
               "RelativeDocumentMoniker": "LibraryManager\\QLPhieuNhap.cs",
@@ -433,7 +553,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "QLThietBi.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
               "RelativeDocumentMoniker": "LibraryManager\\UI\\QLThietBi\\QLThietBi.cs",
@@ -444,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "RegisterForm.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\RegisterForm.cs",
               "RelativeDocumentMoniker": "LibraryManager\\RegisterForm.cs",
@@ -455,7 +575,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\LoginForm.cs",
               "RelativeDocumentMoniker": "LibraryManager\\LoginForm.cs",
@@ -466,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "FormXemChiTietPhieuPhat.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\FormXemChiTietPhieuPhat.cs",
               "RelativeDocumentMoniker": "LibraryManager\\FormXemChiTietPhieuPhat.cs",
@@ -477,7 +597,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "ThemPhieuMuonGUI.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\ThemPhieuMuonGUI.cs",
               "RelativeDocumentMoniker": "LibraryManager\\ThemPhieuMuonGUI.cs",
@@ -488,7 +608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "ThongKe.cs [Design]",
               "DocumentMoniker": "D:\\Projects\\LibraryManager\\LibraryManager\\ThongKe.cs",
               "RelativeDocumentMoniker": "LibraryManager\\ThongKe.cs",

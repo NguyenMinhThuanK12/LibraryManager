@@ -28,7 +28,7 @@ namespace LibraryWeb.User.Modules
         {
             ddlTrangThaiDC.Items.Clear();
             ddlTrangThaiDC.Items.Add(new ListItem("Tất cả", ""));
-            ddlTrangThaiDC.Items.Add(new ListItem("Chờ duyệt", "Chờ duyệt"));
+            ddlTrangThaiDC.Items.Add(new ListItem("Đang xử lý", "Đang xử lý"));
             ddlTrangThaiDC.Items.Add(new ListItem("Đã xác nhận", "Đã xác nhận"));
             ddlTrangThaiDC.Items.Add(new ListItem("Đã huỷ", "Đã huỷ"));
         }

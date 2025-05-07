@@ -1,41 +1,39 @@
 ﻿using LibraryManager.DTO;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using LibraryManager.ConnectDatabase;
-
-
-
-
 
 namespace LibraryManager.DAO
 {
     public class ThanhVienDAO
     {
-       public List<ThanhVienDTO> GetAllThanhVien()
+        public List<ThanhVienDTO> GetAllThanhVien()
         {
             List<ThanhVienDTO> list = new List<ThanhVienDTO>();
-            DatabaseConnection db = new DatabaseConnection();
             MySqlConnection conn = DatabaseConnection.GetConnection();
+
+            if (conn == null)
+            {
+                return list;
+            }
+
             try
             {
-                conn.Open();
                 string query = "SELECT * FROM thanhvien";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 MySqlDataReader reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                 {
                     ThanhVienDTO tv = new ThanhVienDTO
                     {
                         maThanhVien = reader.GetInt32("maThanhVien"),
-                        hoTen = reader.GetString("hoTen"),
+                        hoTen = reader["hoTen"]?.ToString(),
                         ngaySinh = reader.GetDateTime("ngaySinh"),
-                        diaChi = reader.GetString("diaChi"),
-                        sdt = reader.GetString("sdt"),
-                        email = reader.GetString("email"),
+                        diaChi = reader["diaChi"]?.ToString(),
+                        sdt = reader["sdt"]?.ToString(),
+                        email = reader["email"]?.ToString(),
                         ngayDangKy = reader.GetDateTime("ngayDangKy")
                     };
                     list.Add(tv);
@@ -43,22 +41,23 @@ namespace LibraryManager.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Lỗi GetAllThanhVien: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
+
             return list;
         }
 
         public void UpdateThanhVien(ThanhVienDTO tv)
         {
-           
             MySqlConnection conn = DatabaseConnection.GetConnection();
+            if (conn == null) return;
+
             try
             {
-                conn.Open();
                 string query = "UPDATE thanhvien SET hoTen=@hoTen, ngaySinh=@ngaySinh, diaChi=@diaChi, sdt=@sdt, email=@email WHERE maThanhVien=@maThanhVien";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@maThanhVien", tv.maThanhVien);
@@ -71,7 +70,7 @@ namespace LibraryManager.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Lỗi UpdateThanhVien: " + ex.Message);
             }
             finally
             {
@@ -81,11 +80,11 @@ namespace LibraryManager.DAO
 
         public void DeleteThanhVien(int maThanhVien)
         {
-           
             MySqlConnection conn = DatabaseConnection.GetConnection();
+            if (conn == null) return;
+
             try
             {
-                conn.Open();
                 string query = "DELETE FROM thanhvien WHERE maThanhVien=@maThanhVien";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
@@ -93,7 +92,7 @@ namespace LibraryManager.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Lỗi DeleteThanhVien: " + ex.Message);
             }
             finally
             {
@@ -101,22 +100,23 @@ namespace LibraryManager.DAO
             }
         }
 
-        ///xóa nhiều thành viên
         public void DeleteNhieuThanhVien(List<int> danhSachMaThanhVien)
         {
             if (danhSachMaThanhVien == null || danhSachMaThanhVien.Count == 0)
                 return;
+
             MySqlConnection conn = DatabaseConnection.GetConnection();
+            if (conn == null) return;
+
             try
             {
-                conn.Open();
                 string query = "DELETE FROM thanhvien WHERE maThanhVien IN (" + string.Join(",", danhSachMaThanhVien) + ")";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Lỗi DeleteNhieuThanhVien: " + ex.Message);
             }
             finally
             {
@@ -124,30 +124,29 @@ namespace LibraryManager.DAO
             }
         }
 
-
-
-
         public List<ThanhVienDTO> SearchThanhVienByName(string hoTen)
         {
             List<ThanhVienDTO> list = new List<ThanhVienDTO>();
             MySqlConnection conn = DatabaseConnection.GetConnection();
+            if (conn == null) return list;
+
             try
             {
-                conn.Open();
                 string query = "SELECT * FROM thanhvien WHERE hoTen LIKE @hoTen";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@hoTen", "%" + hoTen + "%");
                 MySqlDataReader reader = cmd.ExecuteReader();
+
                 while (reader.Read())
                 {
                     ThanhVienDTO tv = new ThanhVienDTO
                     {
                         maThanhVien = reader.GetInt32("maThanhVien"),
-                        hoTen = reader.GetString("hoTen"),
+                        hoTen = reader["hoTen"]?.ToString(),
                         ngaySinh = reader.GetDateTime("ngaySinh"),
-                        diaChi = reader.GetString("diaChi"),
-                        sdt = reader.GetString("sdt"),
-                        email = reader.GetString("email"),
+                        diaChi = reader["diaChi"]?.ToString(),
+                        sdt = reader["sdt"]?.ToString(),
+                        email = reader["email"]?.ToString(),
                         ngayDangKy = reader.GetDateTime("ngayDangKy")
                     };
                     list.Add(tv);
@@ -155,22 +154,23 @@ namespace LibraryManager.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Lỗi SearchThanhVienByName: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
+
             return list;
         }
 
         public void ThemThanhVien(ThanhVienDTO thanhVien)
         {
             MySqlConnection conn = DatabaseConnection.GetConnection();
+            if (conn == null) return;
 
             try
             {
-                conn.Open();
                 string query = "INSERT INTO thanhvien (maThanhVien, hoTen, ngaySinh, diaChi, sdt, email, ngayDangKy) " +
                                "VALUES (@maThanhVien, @hoTen, @ngaySinh, @diaChi, @sdt, @email, @ngayDangKy)";
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -185,17 +185,12 @@ namespace LibraryManager.DAO
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Lỗi ThemThanhVien: " + ex.Message);
             }
             finally
             {
                 conn.Close();
             }
         }
-
-
     }
-
-
-
 }

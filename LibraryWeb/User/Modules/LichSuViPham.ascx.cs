@@ -41,14 +41,15 @@ namespace LibraryWeb.User.Modules
             {
                 conn.Open();
                 string query = @"
-                    SELECT MaPhieuPhat, MaPhieuMuon, NgayTao, TrangThai
-                    FROM phieuphat
-                    WHERE MaPhieuMuon IN (
-                        SELECT MaPhieuMuon FROM phieumuon WHERE MaThanhVien = @maTV
-                    )
-                    AND (@keyword = '' OR MaPhieuPhat LIKE CONCAT('%', @keyword, '%'))
-                    AND (@trangThai = '' OR TrangThaiThanhToan = @trangThai)
-                    ORDER BY NgayTao DESC";
+                SELECT MaPhieuPhat, MaPhieuMuon, NgayTao, TrangThaiThanhToan
+                FROM phieuphat
+                WHERE MaPhieuMuon IN (
+                    SELECT MaPhieuMuon FROM phieumuon WHERE MaThanhVien = @maTV
+                )
+                AND (@keyword = '' OR MaPhieuPhat LIKE CONCAT('%', @keyword, '%'))
+                AND (@trangThai = '' OR TrangThaiThanhToan = @trangThai)
+                ORDER BY NgayTao DESC";
+
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@maTV", maTV);
@@ -73,7 +74,7 @@ namespace LibraryWeb.User.Modules
             {
                 conn.Open();
 
-                string query1 = "SELECT NgayTao, TrangThai FROM phieuphat WHERE MaPhieuPhat = @maPhieu";
+                string query1 = "SELECT NgayTao, TrangThaiThanhToan FROM phieuphat WHERE MaPhieuPhat = @maPhieu";
                 MySqlCommand cmd1 = new MySqlCommand(query1, conn);
                 cmd1.Parameters.AddWithValue("@maPhieu", maPhieuPhat);
                 using (var reader = cmd1.ExecuteReader())
@@ -81,7 +82,7 @@ namespace LibraryWeb.User.Modules
                     if (reader.Read())
                     {
                         lblNgayTaoPhat.Text = Convert.ToDateTime(reader["NgayTao"]).ToString("dd/MM/yyyy HH:mm");
-                        lblTrangThaiPhat.Text = reader["TrangThai"].ToString();
+                        lblTrangThaiPhat.Text = reader["TrangThaiThanhToan"].ToString();
                     }
                 }
 
