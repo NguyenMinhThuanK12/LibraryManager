@@ -442,7 +442,10 @@ namespace muon
 
             // Tạo phiếu phạt và chi tiết
             var (ppModel, listCTPP, _) = TinhPhieuPhat();
-
+            if(listCTPP.Count == 0)
+            {
+                return;
+            }
             try
             {
                 if (phieuPhatRepo.Insert(ppModel, listCTPP))

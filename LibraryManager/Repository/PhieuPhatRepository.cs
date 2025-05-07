@@ -83,8 +83,8 @@ namespace LibraryManager.Repository
         }
         public int InsertAndGetLastId(PhieuPhatModel phieu)
         {
-            string query = "INSERT INTO phieuphat (MaPhieuMuon, TongTienPhat, NgayTao) " +
-               "VALUES (@MaPhieuMuon, @TongTienPhat, @NgayTao); " +
+            string query = "INSERT INTO phieuphat (MaPhieuMuon, TongTienPhat, NgayTao, TrangThaiThanhToan) " +
+               "VALUES (@MaPhieuMuon, @TongTienPhat, @NgayTao, 'Đã Thanh Toán'); " +
                "SELECT LAST_INSERT_ID();";
 
             using (MySqlConnection conn = DatabaseConnection.GetConnection())
