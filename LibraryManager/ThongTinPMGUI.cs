@@ -388,6 +388,7 @@ namespace muon
 
             using var conn = DatabaseConnection.GetConnection();
             if (conn == null) return;
+
             using var tran = conn.BeginTransaction();
             try
             {
@@ -395,34 +396,45 @@ namespace muon
                 {
                     if (r.IsNewRow) continue;
                     int maSp = Convert.ToInt32(r.Cells["MaSanPham"].Value);
-                    object rawSLTH = r.Cells["SoLuongThietHai"].Value;
-                    int slTH = (rawSLTH == null || rawSLTH == DBNull.Value)
-                               ? 0
-                               : Convert.ToInt32(rawSLTH);
+                    int sl = Convert.ToInt32(r.Cells["SoLuong"].Value);
+                    object rawTH = r.Cells["SoLuongThietHai"].Value;
+                    int slTH = (rawTH == null || rawTH == DBNull.Value)
+                                ? 0
+                                : Convert.ToInt32(rawTH);
 
-                    object rawSt = r.Cells["TrangThai"].Value;
-                    string status = (rawSt == null || rawSt == DBNull.Value)
-                                    ? "Bình thường"
-                                    : rawSt.ToString();
-
+                    string status = r.Cells["TrangThai"].Value?.ToString() ?? "Bình thường";
                     var cmdCT = new MySqlCommand(@"
                     UPDATE chitietphieumuon
-                    SET SoLuongThietHai = @slTH, TrangThai = @st
-                    WHERE MaPhieuMuon = @pm AND MaSanPham = @sp;", conn, tran);
+                    SET SoLuongThietHai = @slTH,
+                    TrangThai       = @st
+                    WHERE MaPhieuMuon    = @pm
+                    AND MaSanPham     = @sp;", conn, tran);
                     cmdCT.Parameters.AddWithValue("@slTH", slTH);
                     cmdCT.Parameters.AddWithValue("@st", status);
                     cmdCT.Parameters.AddWithValue("@pm", _maPM);
                     cmdCT.Parameters.AddWithValue("@sp", maSp);
                     cmdCT.ExecuteNonQuery();
+
+                    int toReturn = sl - slTH;
+                    if (toReturn > 0)
+                    {
+                        var cmdStock = new MySqlCommand(@"
+                        UPDATE sanpham
+                        SET SoLuong = SoLuong + @ret
+                        WHERE MaSanPham = @sp;", conn, tran);
+                        cmdStock.Parameters.AddWithValue("@ret", toReturn);
+                        cmdStock.Parameters.AddWithValue("@sp", maSp);
+                        cmdStock.ExecuteNonQuery();
+                    }
                 }
 
                 double newTotal = double.Parse(tboxtotal.Text, NumberStyles.AllowThousands);
-
-                var cmdPM = new MySqlCommand(@"UPDATE phieumuon
-                    SET TrangThaiMuon = 'Đã trả',
-                    ThoiGianTraThucTe = @time,
-                    TongTien = @tot
-                    WHERE MaPhieuMuon = @pm;", conn, tran);
+                var cmdPM = new MySqlCommand(@"
+                UPDATE phieumuon
+                SET TrangThaiMuon       = 'Đã trả',
+                ThoiGianTraThucTe   = @time,
+                TongTien            = @tot
+                 WHERE MaPhieuMuon         = @pm;", conn, tran);
                 cmdPM.Parameters.AddWithValue("@time", DateTime.Now);
                 cmdPM.Parameters.AddWithValue("@tot", newTotal);
                 cmdPM.Parameters.AddWithValue("@pm", _maPM);

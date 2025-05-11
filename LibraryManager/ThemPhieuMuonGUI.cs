@@ -44,7 +44,7 @@ namespace muon
         private void ThemPhieuMuonGUI_Load(object sender, EventArgs e)
         {
             var dtUsers = DatabaseConnection.ExecuteSelectQuery(
-                "SELECT MaThanhVien, HoTen FROM thanhvien");
+                "SELECT MaThanhVien, HoTen FROM thanhvien WHERE MaThanhVien <> 1");
             dtUsers.Columns.Add("Full", typeof(string), "MaThanhVien + ' - ' + HoTen");
             cboboxuser.DataSource = dtUsers;
             cboboxuser.ValueMember = "MaThanhVien";
@@ -66,7 +66,6 @@ namespace muon
 
         private void btnadditem_Click(object sender, EventArgs e)
         {
-
             if (!int.TryParse(tboxquantity.Text.Trim(), out int qty) || qty <= 0)
             {
                 MessageBox.Show("Nhập số lượng hợp lệ (≥1).", "Chú ý", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -74,20 +73,54 @@ namespace muon
             }
 
             int maSp = (int)cboboxitem.SelectedValue;
-            DataRow dr = ((DataTable)cboboxitem.DataSource).Rows.Find(maSp);    // nếu dt có PrimaryKey = MaSanPham
-
+            var dt = (DataTable)cboboxitem.DataSource;
+            DataRow dr = dt.Rows.Find(maSp);
             int available = (int)dr["SoLuong"];
-            if (qty > available)
+
+            int existingQty = 0;
+            DataGridViewRow found = null;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
             {
-                MessageBox.Show("Không đủ tồn kho!");
-                return;
+                if (row.IsNewRow) continue;
+                if ((int)row.Cells["MaSanPham"].Value == maSp)
+                {
+                    found = row;
+                    existingQty = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                    break;
+                }
             }
 
-            double giaTri = Convert.ToDouble(dr["GiaTri"]);
-            double tienCoc = giaTri * qty;            
-            double giaMuon = 15000 * qty;            
+            if (found != null)
+            {
+                int totalQty = existingQty + qty;
+                if (totalQty > available)
+                {
+                    MessageBox.Show("Không đủ tồn kho để cộng dồn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            dataGridView1.Rows.Add(maSp, qty, tienCoc, giaMuon);
+                double giaTri = Convert.ToDouble(dr["GiaTri"]);
+                double newTienCoc = giaTri * totalQty;
+                double newGiaMuon = 15000 * totalQty;
+
+                found.Cells["SoLuong"].Value = totalQty;
+                found.Cells["TienCocMuon"].Value = newTienCoc;
+                found.Cells["GiaMuon"].Value = newGiaMuon;
+            }
+            else
+            {
+                if (qty > available)
+                {
+                    MessageBox.Show("Không đủ tồn kho!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                double giaTri = Convert.ToDouble(dr["GiaTri"]);
+                double tienCoc = giaTri * qty;
+                double giaMuon = 15000 * qty;
+                dataGridView1.Rows.Add(maSp, qty, tienCoc, giaMuon);
+            }
+
             UpdateTotalMoney();
         }
 

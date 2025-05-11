@@ -262,7 +262,11 @@ namespace LibraryManager
 
         private void btn_XemLichSu_Click(object sender, EventArgs e)
         {
+            if (data_Tb_QLTV.CurrentRow == null) return;
 
+            int maTv = Convert.ToInt32(data_Tb_QLTV.CurrentRow.Cells["maThanhVien"].Value);
+            var historyForm = new PhieuMuonTV(maTv);
+            historyForm.ShowDialog();
         }
 
         private void btn_ViPham_Click(object sender, EventArgs e)

@@ -57,6 +57,29 @@ namespace LibraryManager.ConnectDatabase
             return dt;
         }
 
+        public static DataTable ExecuteSelectQuery(string query, params MySqlParameter[] parameters)
+        {
+            DataTable dt = new DataTable();
+            using (var conn = GetConnection())
+            {
+                if (conn == null) return dt;
+                try
+                {
+                    using var cmd = new MySqlCommand(query, conn);
+                    if (parameters != null)
+                        cmd.Parameters.AddRange(parameters);
+
+                    using var da = new MySqlDataAdapter(cmd);
+                    da.Fill(dt);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi ExecuteSelectQuery có parameters: " + ex.Message);
+                }
+            }
+            return dt;
+        }
+
         // Hàm thực thi câu lệnh INSERT, UPDATE, DELETE
         public static int ExecuteNonQuery(string query)
         {
