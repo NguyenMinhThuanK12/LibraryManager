@@ -1,4 +1,4 @@
-﻿namespace LibraryManager
+namespace LibraryManager
 {
     partial class FormXemChiTietPhieuPhat
     {
@@ -42,6 +42,8 @@
             label5 = new Label();
             lbMaThanhVien = new Label();
             label7 = new Label();
+            lbThoiGian = new Label();
+            label8 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -195,11 +197,33 @@
             label7.TabIndex = 23;
             label7.Text = "Mã Thành Viên :";
             // 
+            // lbThoiGian
+            // 
+            lbThoiGian.AutoSize = true;
+            lbThoiGian.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lbThoiGian.Location = new Point(677, 61);
+            lbThoiGian.Name = "lbThoiGian";
+            lbThoiGian.Size = new Size(51, 20);
+            lbThoiGian.TabIndex = 26;
+            lbThoiGian.Text = "label3";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label8.Location = new Point(574, 61);
+            label8.Name = "label8";
+            label8.Size = new Size(84, 20);
+            label8.TabIndex = 25;
+            label8.Text = "Thời Gian :";
+            // 
             // FormXemChiTietPhieuPhat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(825, 536);
+            Controls.Add(lbThoiGian);
+            Controls.Add(label8);
             Controls.Add(lbMaThanhVien);
             Controls.Add(label7);
             Controls.Add(lbTenThanhVien);
@@ -237,5 +261,7 @@
         private Label label5;
         private Label lbMaThanhVien;
         private Label label7;
+        private Label lbThoiGian;
+        private Label label8;
     }
 }
