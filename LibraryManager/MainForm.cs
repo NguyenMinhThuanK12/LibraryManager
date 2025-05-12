@@ -103,13 +103,13 @@ namespace LibraryManager
                 Width = 210
             };
 
-            btnOverview = CreateSidebarButton("Tổng quan", Properties.Resources.dashboard, 20);
+            btnOverview = CreateSidebarButton("Check in", Properties.Resources.dashboard, 20);
             btnMember = CreateSidebarButton("Thành viên", Properties.Resources.user, 80);
             btnBorrow = CreateSidebarButton("Phiếu mượn", Properties.Resources.note, 140);
             btnDevice = CreateSidebarButton("Thiết bị", Properties.Resources.book, 200);
             btnReservation = CreateSidebarButton("Đặt chỗ", Properties.Resources.calendar, 260);
             btnViolation = CreateSidebarButton("Vi phạm", Properties.Resources.cancel, 320);
-            btnDiscount = CreateSidebarButton("Giảm giá", Properties.Resources.Tag, 380);
+            btnDiscount = CreateSidebarButton("Thống kê", Properties.Resources.Tag, 380);
             btnReceipt = CreateSidebarButton("Phiếu nhập", Properties.Resources.Download, 440);
             btnLogout = CreateSidebarButton("Đăng xuất", Properties.Resources.Logout, 680, true);
 
@@ -207,10 +207,10 @@ namespace LibraryManager
         {
             contentPanel.Controls.Clear();
             UserControl control = null;
-            if (string.Equals(module, "Tổng quan", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(module, "Check in", StringComparison.OrdinalIgnoreCase))
             {
-                //  mở giao diện Tổng quan
-                control = new ThongKe();
+                //  mở giao diện Check in
+                control = new CheckIn();
             }
             else if (string.Equals(module, "Thành viên", StringComparison.OrdinalIgnoreCase))
             {
@@ -238,9 +238,10 @@ namespace LibraryManager
                 // mở giao diện Vi phạm
                 control = new QLPhieuPhat();
             }
-            else if (string.Equals(module, "Giảm giá", StringComparison.OrdinalIgnoreCase))
+            else if (string.Equals(module, "Thống kê", StringComparison.OrdinalIgnoreCase))
             {
-                //  mở giao diện Giảm giá
+                //  mở giao diện Thống kê
+                control = new ThongKe();
             }
             else if (string.Equals(module, "Phiếu nhập", StringComparison.OrdinalIgnoreCase))
             {
