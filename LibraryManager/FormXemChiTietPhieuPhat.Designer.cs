@@ -48,7 +48,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(231, 9);
+            label1.Location = new Point(290, 9);
             label1.Name = "label1";
             label1.Size = new Size(267, 38);
             label1.TabIndex = 0;
@@ -86,19 +86,19 @@
             tbChiTietPhieuPhat.ColumnCount = 2;
             tbChiTietPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tbChiTietPhieuPhat.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tbChiTietPhieuPhat.Location = new Point(12, 153);
+            tbChiTietPhieuPhat.Location = new Point(12, 128);
             tbChiTietPhieuPhat.Name = "tbChiTietPhieuPhat";
             tbChiTietPhieuPhat.RowCount = 2;
             tbChiTietPhieuPhat.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tbChiTietPhieuPhat.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tbChiTietPhieuPhat.Size = new Size(801, 303);
+            tbChiTietPhieuPhat.Size = new Size(801, 280);
             tbChiTietPhieuPhat.TabIndex = 14;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(564, 94);
+            label2.Location = new Point(547, 426);
             label2.Name = "label2";
             label2.Size = new Size(123, 20);
             label2.TabIndex = 15;
@@ -108,7 +108,7 @@
             // 
             lbTongTienPhat.AutoSize = true;
             lbTongTienPhat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbTongTienPhat.Location = new Point(694, 94);
+            lbTongTienPhat.Location = new Point(677, 426);
             lbTongTienPhat.Name = "lbTongTienPhat";
             lbTongTienPhat.Size = new Size(119, 20);
             lbTongTienPhat.TabIndex = 16;
@@ -118,7 +118,7 @@
             // 
             lbMaPhieuPhat.AutoSize = true;
             lbMaPhieuPhat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbMaPhieuPhat.Location = new Point(424, 61);
+            lbMaPhieuPhat.Location = new Point(424, 94);
             lbMaPhieuPhat.Name = "lbMaPhieuPhat";
             lbMaPhieuPhat.Size = new Size(115, 20);
             lbMaPhieuPhat.TabIndex = 18;
@@ -128,7 +128,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(290, 61);
+            label4.Location = new Point(290, 94);
             label4.Name = "label4";
             label4.Size = new Size(118, 20);
             label4.TabIndex = 17;
@@ -138,7 +138,7 @@
             // 
             lbMaPhieuMuon.AutoSize = true;
             lbMaPhieuMuon.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            lbMaPhieuMuon.Location = new Point(424, 94);
+            lbMaPhieuMuon.Location = new Point(424, 61);
             lbMaPhieuMuon.Name = "lbMaPhieuMuon";
             lbMaPhieuMuon.Size = new Size(124, 20);
             lbMaPhieuMuon.TabIndex = 20;
@@ -149,7 +149,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(290, 94);
+            label6.Location = new Point(290, 61);
             label6.Name = "label6";
             label6.Size = new Size(128, 20);
             label6.TabIndex = 19;

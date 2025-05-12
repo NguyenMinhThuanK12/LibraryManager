@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryManager.ConnectDatabase;
+using LibraryManager.DTO;
 using LibraryManager.Model;
 using MySql.Data.MySqlClient;
 
@@ -30,6 +31,56 @@ namespace LibraryManager.Repository
                 });
             }
 
+            return list;
+        }
+        public ThanhVienDTO getThanhVienById(int maThanhVien)
+        {
+            ThanhVienDTO thanhVien = null;
+            string query = "SELECT * FROM thanhvien WHERE MaThanhVien = @maThanhVien";
+
+            using (MySqlConnection conn = DatabaseConnection.GetConnection())
+            {
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@maThanhVien", maThanhVien);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            thanhVien = new ThanhVienDTO
+                            {
+                                maThanhVien = reader.GetInt32("MaThanhVien"),
+                                hoTen = reader.GetString("HoTen"),
+                                ngaySinh = reader.GetDateTime("NgaySinh"),
+                                diaChi = reader.GetString("DiaChi"),
+                                sdt = reader.GetString("SDT"),
+                                email = reader.GetString("Email"),
+                                ngayDangKy = reader.GetDateTime("NgayDangKy")
+                            };
+                        }
+                    }
+                }
+            }
+
+            return thanhVien;
+        }
+        public List<PhieuPhatModel> GetPhieuPhatByMaThanhVien(int maThanhVien)
+        {
+            List<PhieuPhatModel> list = new List<PhieuPhatModel>();
+            string query = $"SELECT * FROM phieuphat WHERE MaThanhVien = {maThanhVien}";
+            DataTable dt = DatabaseConnection.ExecuteSelectQuery(query);
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(new PhieuPhatModel
+                {
+                    MaPhieuPhat = Convert.ToInt32(row["MaPhieuPhat"]),
+                    MaPhieuMuon = Convert.ToInt32(row["MaPhieuMuon"]),
+                    TongTienPhat = Convert.ToDouble(row["TongTienPhat"]),
+                    NgayTao = Convert.ToDateTime(row["NgayTao"]),
+                    TrangThaiThanhToan = Convert.ToString(row["TrangThaiThanhToan"])
+                });
+            }
             return list;
         }
         public List<ChiTietPhieuPhatModel> GetChiTietPhieuPhat(int maPhieuPhat)

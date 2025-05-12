@@ -271,7 +271,19 @@ namespace LibraryManager
 
         private void btn_ViPham_Click(object sender, EventArgs e)
         {
+            if (data_Tb_QLTV.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn ít nhất một thành viên để xem thông tin.");
+                return;
+            }
+            // Lấy chỉ số hàng hiện tại
+            int rowIndex = data_Tb_QLTV.CurrentRow.Index;
 
+            // Lấy giá trị từ cột "maThanhVien" (giả sử cột có tên đó)
+            int maThanhVien = Convert.ToInt32(data_Tb_QLTV.Rows[rowIndex].Cells["maThanhVien"].Value);
+
+            FormXemDanhSachViPhamById form = new FormXemDanhSachViPhamById(maThanhVien);
+            form.ShowDialog(); // hoặc .Show() nếu bạn muốn form không chặn
         }
         /// 
         /// Đọc dữ liệu từ file Excel và chuyển đổi thành danh sách đối tượng ThanhVienDTO
