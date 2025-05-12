@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +29,7 @@ namespace LibraryManager
             lbMaPhieuPhat.Text = phieuPhat.MaPhieuPhat.ToString();
             lbMaPhieuMuon.Text = phieuPhat.MaPhieuMuon.ToString();
             lbTongTienPhat.Text = phieuPhat.TongTienPhat.ToString("N0");
-
+            lbThoiGian.Text = phieuPhat.NgayTao.ToString("dd/MM/yyyy");
 
             lbMaThanhVien.Text = Repository.GetMaThanhVienByMaPhieuPhat(phieuPhat.MaPhieuPhat).ToString();
             lbTenThanhVien.Text = Repository.GetTenThanhVienByMaPhieuPhat(phieuPhat.MaPhieuPhat);
