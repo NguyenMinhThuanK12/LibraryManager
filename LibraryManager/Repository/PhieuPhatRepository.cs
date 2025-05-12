@@ -68,7 +68,7 @@ namespace LibraryManager.Repository
         public List<PhieuPhatModel> GetPhieuPhatByMaThanhVien(int maThanhVien)
         {
             List<PhieuPhatModel> list = new List<PhieuPhatModel>();
-            string query = $"SELECT * FROM phieuphat WHERE MaThanhVien = {maThanhVien}";
+            string query = $"SELECT * FROM phieuphat, phieumuon WHERE phieuphat.MaPhieuMuon = phieumuon.MaPhieuMuon AND phieumuon.MaThanhVien = {maThanhVien}";
             DataTable dt = DatabaseConnection.ExecuteSelectQuery(query);
             foreach (DataRow row in dt.Rows)
             {
@@ -135,22 +135,22 @@ namespace LibraryManager.Repository
         public int InsertAndGetLastId(PhieuPhatModel phieu)
         {
             string query = "INSERT INTO phieuphat (MaPhieuMuon, TongTienPhat, NgayTao, TrangThaiThanhToan) " +
-               "VALUES (@MaPhieuMuon, @TongTienPhat, @NgayTao, 'Đã Thanh Toán'); " +
+               "VALUES (@MaPhieuMuon, @TongTienPhat, NOW(), @TrangThaiThanhToan); " +
                "SELECT LAST_INSERT_ID();";
-
+        
             using (MySqlConnection conn = DatabaseConnection.GetConnection())
             {
                 using (MySqlCommand cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@MaPhieuMuon", phieu.MaPhieuMuon);
                     cmd.Parameters.AddWithValue("@TongTienPhat", phieu.TongTienPhat);
-                    cmd.Parameters.AddWithValue("@NgayTao", phieu.NgayTao);
-
+                    cmd.Parameters.AddWithValue("@TrangThaiThanhToan", "Đã Thanh Toán");
+        
                     int newId = Convert.ToInt32(cmd.ExecuteScalar());
                     return newId;
                 }
             }
-
+        
         }
         public int AddChiTietPhieuPhat(ChiTietPhieuPhatModel chitiet)
         {
