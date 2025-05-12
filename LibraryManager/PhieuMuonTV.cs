@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using LibraryManager.ConnectDatabase;
 using muon;
 using MySql.Data.MySqlClient;
-using OfficeOpenXml.LoadFunctions.Params;
+//using OfficeOpenXml.LoadFunctions.Params;
 
 namespace LibraryManager
 {

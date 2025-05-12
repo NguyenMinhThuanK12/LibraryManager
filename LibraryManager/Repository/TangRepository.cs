@@ -33,5 +33,12 @@ namespace LibraryManager.Repository
             }
             return list;
         }
+
+        public int GetIdByName(string tenTang)
+        {
+            var list = GetAllTang();
+            var item = list.Find(x => x.TenTang.Equals(tenTang, StringComparison.OrdinalIgnoreCase));
+            return item?.MaTang ?? 0;
+        }
     }
 }

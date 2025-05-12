@@ -77,7 +77,8 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(255, 192, 192);
+            //panel1.BackColor = Color.FromArgb(255, 192, 192);
+            panel1.BackColor = Color.White;
             panel1.Controls.Add(pn_QLTV);
             panel1.Controls.Add(pn_QLTV2);
             panel1.Controls.Add(pn_QLTV1);

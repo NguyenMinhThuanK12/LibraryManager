@@ -77,6 +77,13 @@ namespace LibraryManager.Repository
             }
             return list;
         }
+
+        public int GetIdByName(string tenTheLoai)
+        {
+            var list = GetAllTheLoai();
+            var item = list.Find(x => x.TenTL.Equals(tenTheLoai, StringComparison.OrdinalIgnoreCase));
+            return item?.MaTL ?? 0;
+        }
     }
 
 

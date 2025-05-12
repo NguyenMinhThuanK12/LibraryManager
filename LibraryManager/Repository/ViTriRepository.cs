@@ -33,5 +33,12 @@ namespace LibraryManager.Repository
             }
             return list;
         }
+
+        public int GetIdByName(string tenViTri)
+        {
+            var list = GetAllViTri();
+            var item = list.Find(x => x.TenViTri.Equals(tenViTri, StringComparison.OrdinalIgnoreCase));
+            return item?.MaViTri ?? 0;
+        }
     }
 }
