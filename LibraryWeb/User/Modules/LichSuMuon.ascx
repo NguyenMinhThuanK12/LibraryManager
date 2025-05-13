@@ -55,6 +55,11 @@ tr:hover {
 .selected-row {
     background-color: #d2f4dd !important;
 }
+.scrollable-table {
+    max-height: 500px; 
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
 .detail-title {
     font-size: 20px;
     font-weight: bold;
@@ -89,7 +94,7 @@ tr:hover {
                     <asp:ListItem Text="Quá hạn" Value="Quá hạn" />
                 </asp:DropDownList>
             </div>
-
+            <div class="scrollable-table">
             <asp:Repeater ID="rptPhieuMuonList" runat="server">
                 <HeaderTemplate>
                     <table>
@@ -116,6 +121,8 @@ tr:hover {
                     </table>
                 </FooterTemplate>
             </asp:Repeater>
+            </div>
+
         </div>
 
         <div class="right-pane">

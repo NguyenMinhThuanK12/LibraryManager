@@ -32,7 +32,11 @@
         flex: 1;
         min-width: 120px;
     }
-
+    .scrollable-table {
+    max-height: 500px; 
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
     .device-table, .reservation-table {
         width: 100%;
         border-collapse: collapse;
@@ -81,6 +85,7 @@
 
 <div class="content-body">
     <!-- Danh sách thiết bị -->
+
     <div class="device-list">
         <div class="search-bar">
             <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control search-box"
@@ -89,7 +94,7 @@
             <asp:DropDownList ID="ddlTheLoai" runat="server" CssClass="form-control dropdown-theloai"
                 AutoPostBack="true" OnSelectedIndexChanged="ddlTheLoai_SelectedIndexChanged" />
         </div>
-
+        <div class="scrollable-table">
         <asp:Repeater ID="rptThietBi" runat="server">
             <HeaderTemplate>
                 <table class="device-table">
@@ -120,6 +125,7 @@
                 </table>
             </FooterTemplate>
         </asp:Repeater>
+    </div>
     </div>
 
     <!-- Phiếu đặt chỗ -->

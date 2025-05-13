@@ -39,6 +39,11 @@
         padding: 6px 10px;
         font-size: 14px;
     }
+    .scrollable-table {
+    max-height: 500px; 
+    overflow-y: auto;
+    border: 1px solid #ddd;
+}
     table {
         width: 100%;
         border-collapse: collapse;
@@ -83,7 +88,7 @@
                     <asp:ListItem Text="Đã huỷ" Value="Đã huỷ" />
                 </asp:DropDownList>
             </div>
-
+            <div class="scrollable-table">
             <asp:Repeater ID="rptPhieuDatCho" runat="server">
                 <HeaderTemplate>
                     <table>
@@ -106,6 +111,7 @@
                     </table>
                 </FooterTemplate>
             </asp:Repeater>
+            </div>
         </div>
 
         <!-- Chi tiết phiếu -->
