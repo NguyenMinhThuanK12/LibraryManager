@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace LibraryManager
 {
-    partial class QLDatCho
+    partial class QLmotTv
     {
         /// <summary> 
         /// Required designer variable.
@@ -24,6 +24,8 @@ namespace LibraryManager
             }
             base.Dispose(disposing);
         }
+
+
         private void LoadDataToGrid()
         {
             try
@@ -38,15 +40,31 @@ namespace LibraryManager
 
 
 
-                    string query = "SELECT * FROM phieudatcho";
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
+                    string query = "SELECT b1.HoTen, b2.MaPhieu, b2.MaThanhVien, b2.MaSanPham, b2.SoLuong, " +
+                   "b2.ThoiGianDat, b2.ThoiGianMuonDuKien, b2.TrangThaiDat " +
+                   "FROM thanhvien b1 " +
+                   "JOIN phieudatcho b2 ON b1.MaThanhVien = b2.MaThanhVien ";
 
-                    // Log trạng thái kết nối sau khi dùng adapter
-                  
+                    if (!string.IsNullOrEmpty(hoTen1))
+                    {
+                        query += "WHERE b1.HoTen = @HoTen1";
+                    }
 
-                    tableDatCho.DataSource = table;
+                   
+                    {
+                        using (MySqlCommand cmd = new MySqlCommand(query, conn)) // Dùng để chuẩn bị và thực thi câu SQL
+                        {
+                            if (!string.IsNullOrEmpty(hoTen1))
+                            {
+                                cmd.Parameters.AddWithValue("@HoTen1", hoTen1);// Truyền giá trị vào biến trong SQL
+                            }
+
+                            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd); // là cầu nối giữa cơ sở dữ liệu và chương trình của bạn.
+                            DataTable dt = new DataTable();// tạo bảng chứa csdl 
+                            adapter.Fill(dt); //Dòng này thực thi câu lệnh SQL (qua cmd)
+                            tableDatCho.DataSource = dt;
+                        }
+                    }
                 }
             }
             catch (Exception ex)
@@ -54,7 +72,7 @@ namespace LibraryManager
                 MessageBox.Show("Chi tiết lỗi:\n" + ex.ToString());
             }
         }
-       
+
 
 
         private void QLDatCho_Load(object sender, EventArgs e)
@@ -108,9 +126,8 @@ namespace LibraryManager
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1228, 73);
+            panel1.Size = new Size(1210, 73);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
@@ -118,10 +135,9 @@ namespace LibraryManager
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(69, 15);
             label1.Name = "label1";
-            label1.Size = new Size(231, 38);
+            label1.Size = new Size(123, 38);
             label1.TabIndex = 0;
-            label1.Text = "Quản Lí Đặt Chỗ";
-            label1.Click += label1_Click;
+            label1.Text = "Đặt Chỗ";
             // 
             // panel2
             // 
@@ -139,7 +155,7 @@ namespace LibraryManager
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 73);
             panel2.Name = "panel2";
-            panel2.Size = new Size(300, 620);
+            panel2.Size = new Size(300, 573);
             panel2.TabIndex = 1;
             // 
             // dtpThoiGian
@@ -180,7 +196,6 @@ namespace LibraryManager
             txtMaPhieu.ReadOnly = true;
             txtMaPhieu.Size = new Size(196, 27);
             txtMaPhieu.TabIndex = 6;
-            txtMaPhieu.TextChanged += textBox1_TextChanged;
             // 
             // label7
             // 
@@ -201,7 +216,6 @@ namespace LibraryManager
             label6.Size = new Size(101, 25);
             label6.TabIndex = 4;
             label6.Text = "TG dự kiến";
-            label6.Click += label6_Click;
             // 
             // label4
             // 
@@ -212,7 +226,6 @@ namespace LibraryManager
             label4.Size = new Size(87, 25);
             label4.TabIndex = 2;
             label4.Text = "Số lượng";
-            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -223,7 +236,6 @@ namespace LibraryManager
             label3.Size = new Size(61, 25);
             label3.TabIndex = 1;
             label3.Text = "Ma Tv";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -242,7 +254,7 @@ namespace LibraryManager
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(300, 73);
             panel3.Name = "panel3";
-            panel3.Size = new Size(928, 620);
+            panel3.Size = new Size(910, 573);
             panel3.TabIndex = 2;
             // 
             // tableDatCho
@@ -260,9 +272,9 @@ namespace LibraryManager
             tableDatCho.Location = new Point(0, 3);
             tableDatCho.Name = "tableDatCho";
             tableDatCho.RowHeadersWidth = 51;
-            tableDatCho.Size = new Size(910, 474);
+            tableDatCho.Size = new Size(892, 427);
             tableDatCho.TabIndex = 4;
-            tableDatCho.CellClick += tableDatCho_CellClick;
+            tableDatCho.CellClick += tableDatCho_CellContentClick;
             tableDatCho.CellContentClick += tableDatCho_CellContentClick;
             // 
             // panel4
@@ -273,7 +285,7 @@ namespace LibraryManager
             panel4.Controls.Add(button4);
             panel4.Controls.Add(button2);
             panel4.Controls.Add(button1);
-            panel4.Location = new Point(0, 480);
+            panel4.Location = new Point(-18, 433);
             panel4.Name = "panel4";
             panel4.Size = new Size(928, 140);
             panel4.TabIndex = 3;
@@ -335,15 +347,15 @@ namespace LibraryManager
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // QLDatCho
+            // QLmotTv
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1210, 646);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "QLDatCho";
-            Size = new Size(1228, 693);
+            Name = "QLmotTv";
             Load += QLDatCho_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

@@ -29,13 +29,17 @@ namespace LibraryManager
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.data_Tb_QLTV.Rows[e.RowIndex];
-                //tbox_MaThanhVien.Text = row.Cells["maThanhVien"].Value.ToString();
+               // tbox_MaThanhVien.Text = row.Cells["MTT"].Value.ToString();
                 tbox_HoTen.Text = row.Cells["hoTen"].Value.ToString();
                 dateTime_NgaySinh.Text = row.Cells["ngaySinh"].Value.ToString();
                 tbox_DiaChi.Text = row.Cells["diaChi"].Value.ToString();
                 tbox_SoDienThoai.Text = row.Cells["sdt"].Value.ToString();
                 tbox_Email.Text = row.Cells["email"].Value.ToString();
+               
             }
+           
+
+
 
         }
 
@@ -257,8 +261,22 @@ namespace LibraryManager
 
         private void btn_DatCho_Click(object sender, EventArgs e)
         {
+            if (data_Tb_QLTV.CurrentRow != null)
+            {
+                DataGridViewRow row = data_Tb_QLTV.CurrentRow;
+                string hoTen = row.Cells["HoTen"].Value.ToString();  // Lấy giá trị họ tên từ dòng được chọn
 
+                QLmotTv form = new QLmotTv(hoTen);  // Chuyển hoTen vào form QLmotTv
+                form.ShowDialog();
+               // Hiển thị form QLmotTv
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng trong bảng!");  // Nếu không có dòng nào được chọn
+            }
         }
+
+       
 
         private void btn_XemLichSu_Click(object sender, EventArgs e)
         {
