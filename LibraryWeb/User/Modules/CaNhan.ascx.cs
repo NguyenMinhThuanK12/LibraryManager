@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 using MySql.Data.MySqlClient;
+using BCrypt.Net; // ✅ THÊM using
 
 namespace LibraryWeb.User.Modules
 {
@@ -8,9 +9,7 @@ namespace LibraryWeb.User.Modules
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           
             LoadThongTinCaNhan();
-
         }
 
         private void LoadThongTinCaNhan()
@@ -40,20 +39,18 @@ namespace LibraryWeb.User.Modules
                     if (reader.Read())
                     {
                         txtMaThanhVien.Text = reader["MaThanhVien"].ToString();
-                        txtHoTen.Text = reader["HoTen"].ToString();  
+                        txtHoTen.Text = reader["HoTen"].ToString();
                         object ngaySinhObj = reader["NgaySinh"];
-                        if (ngaySinhObj != DBNull.Value && DateTime.TryParse(ngaySinhObj.ToString(), out DateTime ngaySinh))
-                        {
-                            txtNgaySinh.Text = ngaySinh.ToString("dd/MM/yyyy");
-                        }
-                        else
-                        {
-                            txtNgaySinh.Text = ""; 
-                        }
+                        txtNgaySinh.Text = (ngaySinhObj != DBNull.Value && DateTime.TryParse(ngaySinhObj.ToString(), out DateTime ngaySinh))
+                            ? ngaySinh.ToString("dd/MM/yyyy")
+                            : "";
+
                         txtEmail.Text = reader["Email"].ToString();
                         txtSDT.Text = reader["SDT"].ToString();
                         txtDiaChi.Text = reader["DiaChi"].ToString();
                         txtUsername.Text = reader["TenTaiKhoan"].ToString();
+
+                        //  Lưu hash mật khẩu
                         hdnMatKhau.Value = reader["MatKhau"].ToString();
                     }
                     else
@@ -72,9 +69,9 @@ namespace LibraryWeb.User.Modules
             {
                 conn.Open();
                 string update = @"
-            UPDATE thanhvien 
-            SET Email = @Email, SDT = @SDT, DiaChi = @DiaChi 
-            WHERE MaThanhVien = @maTV";
+                    UPDATE thanhvien 
+                    SET Email = @Email, SDT = @SDT, DiaChi = @DiaChi 
+                    WHERE MaThanhVien = @maTV";
 
                 MySqlCommand cmd = new MySqlCommand(update, conn);
                 cmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
@@ -85,9 +82,8 @@ namespace LibraryWeb.User.Modules
                 cmd.ExecuteNonQuery();
             }
 
-            // Hiển thị thông báo thành công bằng alert
             ScriptManager.RegisterStartupScript(this, GetType(), "alertUpdateSuccess",
-                "alert('✅ Cập nhật thông tin thành viên thành công!');", true);
+                "alert('✅ Cập nhật thông tin thành công!');", true);
         }
 
         protected void btnDoiMatKhau_Click(object sender, EventArgs e)
@@ -96,27 +92,30 @@ namespace LibraryWeb.User.Modules
             string matKhauMoi = txtMatKhauMoi.Text.Trim();
             string matKhauXacNhan = txtXacNhanMatKhau.Text.Trim();
 
-            // Check ô trống
+            // Kiểm tra trống
             if (string.IsNullOrEmpty(matKhauCu) || string.IsNullOrEmpty(matKhauMoi) || string.IsNullOrEmpty(matKhauXacNhan))
             {
-                ScriptManager.RegisterStartupScript(this, GetType(), "alertEmpty", "alert('❌ Vui lòng điền đầy đủ tất cả các trường!');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "alertEmpty", "alert('❌ Vui lòng điền đầy đủ thông tin!');", true);
                 return;
             }
 
-            // Kiểm tra mật khẩu cũ đúng không
-            if (matKhauCu != hdnMatKhau.Value)
+            // So sánh mật khẩu cũ với hash lưu trong DB
+            string hashedOldPass = hdnMatKhau.Value;
+            if (!BCrypt.Net.BCrypt.Verify(matKhauCu, hashedOldPass))
             {
                 ScriptManager.RegisterStartupScript(this, GetType(), "alertWrongOld", "alert('❌ Mật khẩu cũ không chính xác!');", true);
                 return;
             }
 
-            // Kiểm tra xác nhận mật khẩu
+            // Kiểm tra xác nhận mật khẩu mới
             if (matKhauMoi != matKhauXacNhan)
             {
                 ScriptManager.RegisterStartupScript(this, GetType(), "alertMismatch", "alert('❌ Mật khẩu mới không khớp!');", true);
                 return;
             }
 
+            // Hash mật khẩu mới
+            string hashedNewPassword = BCrypt.Net.BCrypt.HashPassword(matKhauMoi);
             int maTV = Convert.ToInt32(Session["MaThanhVien"]);
 
             using (MySqlConnection conn = MySqlHelper.GetConnection())
@@ -125,16 +124,13 @@ namespace LibraryWeb.User.Modules
                 string update = "UPDATE taikhoan SET MatKhau = @MatKhau WHERE MaThanhVien = @maTV";
 
                 MySqlCommand cmd = new MySqlCommand(update, conn);
-                cmd.Parameters.AddWithValue("@MatKhau", matKhauMoi);
+                cmd.Parameters.AddWithValue("@MatKhau", hashedNewPassword);
                 cmd.Parameters.AddWithValue("@maTV", maTV);
 
                 cmd.ExecuteNonQuery();
             }
 
-            // Hiển thị thành công
             ScriptManager.RegisterStartupScript(this, GetType(), "alertSuccess", "alert('✅ Đổi mật khẩu thành công!');", true);
-
-            // Reset các trường
             txtMatKhauCu.Text = txtMatKhauMoi.Text = txtXacNhanMatKhau.Text = "";
         }
     }

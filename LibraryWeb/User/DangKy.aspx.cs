@@ -83,6 +83,8 @@ namespace LibraryWeb.User
 
                 int maThanhVien = Convert.ToInt32(cmd.ExecuteScalar());
 
+                //  Mã hoá mật khẩu
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(matKhau);
                 // 6. Insert tài khoản
                 string insertTK = @"
             INSERT INTO taikhoan (TenTaiKhoan, MaThanhVien, MatKhau, VaiTro, TrangThai,
@@ -92,7 +94,7 @@ namespace LibraryWeb.User
                 MySqlCommand cmd2 = new MySqlCommand(insertTK, conn);
                 cmd2.Parameters.AddWithValue("@tenTK", tenTaiKhoan);
                 cmd2.Parameters.AddWithValue("@maTV", maThanhVien);
-                cmd2.Parameters.AddWithValue("@matKhau", matKhau);
+                cmd2.Parameters.AddWithValue("@matKhau", hashedPassword);
                 cmd2.Parameters.AddWithValue("@thoiGianDangKy", DateTime.Now);
                 cmd2.Parameters.AddWithValue("@thoiGianSuDung", DateTime.Now.AddMonths(1));
                 cmd2.Parameters.AddWithValue("@phiDangKy", 0);

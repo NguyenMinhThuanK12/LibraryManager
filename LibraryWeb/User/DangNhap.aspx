@@ -147,7 +147,9 @@
                 <div class="form-group">
                     <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" TextMode="Password" placeholder="Mật khẩu" />
                 </div>
-                <div class="forgot">Quên mật khẩu?</div>
+              <div class="forgot">
+                <a href="QuenMatKhau.aspx" style="text-decoration:none;color:black;">Quên mật khẩu?</a>
+            </div>
                 <asp:Button ID="btnLogin" runat="server" CssClass="btn-login" Text="Đăng nhập" OnClick="btnLogin_Click" />
             </div>
 

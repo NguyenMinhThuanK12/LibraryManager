@@ -3,11 +3,12 @@ using System.Runtime.InteropServices; // thêm dòng này để dùng DllImport
 using System.Windows.Forms;
 using LibraryManager.ConnectDatabase;
 using System.Data;
+using BCrypt.Net;
 namespace LibraryManager
 {
     public partial class LoginForm : Form
     {
-        // 👇 Thêm đoạn này vào đầu class LoginForm
+      
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn(
@@ -31,7 +32,6 @@ namespace LibraryManager
         // Sự kiện click nút đăng nhập...
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Logic đăng nhập
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
@@ -41,21 +41,32 @@ namespace LibraryManager
                 return;
             }
 
-            // Viết truy vấn kiểm tra tài khoản trong bảng taikhoan
-            string query = $"SELECT * FROM taikhoan WHERE TenTaiKhoan = '{username}' AND MatKhau = '{password}' AND TrangThai = 'active'";
-
+            // Truy vấn lấy thông tin tài khoản theo tên đăng nhập
+            string query = $"SELECT * FROM taikhoan WHERE TenTaiKhoan = '{username}' AND TrangThai = 'active'";
             DataTable dt = DatabaseConnection.ExecuteSelectQuery(query);
 
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Đăng nhập thành công!");
-                this.Hide();
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
+                string hashedPasswordFromDb = dt.Rows[0]["MatKhau"].ToString();
+
+                // So sánh mật khẩu nhập vào với mật khẩu đã hash
+                bool isPasswordCorrect = BCrypt.Net.BCrypt.Verify(password, hashedPasswordFromDb);
+
+                if (isPasswordCorrect)
+                {
+                    MessageBox.Show("Đăng nhập thành công!");
+                    this.Hide();
+                    MainForm mainForm = new MainForm();
+                    mainForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Sai mật khẩu.");
+                }
             }
             else
             {
-                MessageBox.Show("Sai tài khoản, mật khẩu hoặc tài khoản bị vô hiệu hóa.");
+                MessageBox.Show("Tài khoản không tồn tại hoặc đã bị vô hiệu hóa.");
             }
         }
 
@@ -83,7 +94,11 @@ namespace LibraryManager
                 Application.Exit();
             }
         }
-
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordForm forgotForm = new ForgotPasswordForm();
+            forgotForm.ShowDialog();
+        }
         private void lblRegisterPrompt_Click(object sender, EventArgs e)
         {
                     }

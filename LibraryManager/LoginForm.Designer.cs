@@ -146,13 +146,15 @@
             // lblForgotPassword
             // 
             lblForgotPassword.AutoSize = true;
-            lblForgotPassword.Font = new Font("Segoe UI", 11F);
-            lblForgotPassword.ForeColor = Color.Black;
+            lblForgotPassword.Cursor = Cursors.Hand;
+            lblForgotPassword.ForeColor = Color.Blue;
+            lblForgotPassword.Font = new Font("Segoe UI", 11F, FontStyle.Underline);
             lblForgotPassword.Location = new Point(82, 397);
             lblForgotPassword.Name = "lblForgotPassword";
             lblForgotPassword.Size = new Size(150, 25);
             lblForgotPassword.TabIndex = 4;
             lblForgotPassword.Text = "Quên mật khẩu?";
+            lblForgotPassword.Click += lblForgotPassword_Click;
             // 
             // btnLogin
             // 
