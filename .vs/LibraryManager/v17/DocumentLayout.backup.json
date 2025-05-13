@@ -3,29 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\modalkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\modalkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\modalkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\modalkhuyenmai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\modalkhuyenmai.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\modalkhuyenmai.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\khuyenmaigui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-=======
->>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|c:\\users\\pc\\desktop\\doanc#\\librarymanager\\librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{84FB279E-BE83-414D-9F80-26502FC418E6}|LibraryManager\\LibraryManager.csproj|solutionrelative:librarymanager\\connectdatabase\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -37,11 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
-          "SelectedChildIndex": 6,
-=======
           "SelectedChildIndex": 5,
->>>>>>> Stashed changes
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,87 +46,41 @@
             },
             {
               "$type": "Document",
-<<<<<<< Updated upstream
-              "DocumentIndex": 3,
-              "Title": "ModalKhuyenMai.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.Designer.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\ModalKhuyenMai.Designer.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.Designer.cs",
-              "RelativeToolTip": "LibraryManager\\ModalKhuyenMai.Designer.cs",
-              "ViewState": "AgIAADQBAAAAAAAAAAAAwFgBAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:00:05.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ModalKhuyenMai.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\ModalKhuyenMai.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.cs*",
-              "RelativeToolTip": "LibraryManager\\ModalKhuyenMai.cs*",
-              "ViewState": "AgIAAPgAAAAAAAAAAAAAwEIBAAAJAAAAAAAAAA==",
+              "Title": "KhuyenMaiGUI.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
+              "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.cs",
+              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
+              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T17:20:30.919Z",
+              "WhenOpened": "2025-05-06T16:57:13.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ModalKhuyenMai.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\ModalKhuyenMai.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ModalKhuyenMai.cs [Design]*",
-              "RelativeToolTip": "LibraryManager\\ModalKhuyenMai.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T17:11:22.126Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "KhuyenMaiGUI.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
               "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.cs",
               "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs [Design]",
               "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T16:21:24.439Z",
+              "WhenOpened": "2025-05-06T13:41:35.772Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KhuyenMaiGUI.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
-              "RelativeDocumentMoniker": "LibraryManager\\KhuyenMaiGUI.cs",
-              "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\KhuyenMaiGUI.cs",
-              "RelativeToolTip": "LibraryManager\\KhuyenMaiGUI.cs",
-              "ViewState": "AgIAAO8AAAAAAAAAAAAAAAsBAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T10:38:25.956Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-=======
-              "DocumentIndex": 0,
->>>>>>> Stashed changes
+              "DocumentIndex": 2,
               "Title": "DatabaseConnection.cs",
               "DocumentMoniker": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
               "RelativeDocumentMoniker": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
               "ToolTip": "C:\\Users\\PC\\Desktop\\DoAnC#\\LibraryManager\\LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
               "RelativeToolTip": "LibraryManager\\ConnectDatabase\\DatabaseConnection.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD4AAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
-              "WhenOpened": "2025-05-02T10:32:58.716Z"
-=======
               "WhenOpened": "2025-05-02T10:32:58.716Z",
               "EditorCaption": ""
->>>>>>> Stashed changes
             }
           ]
         }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            richTextBox1 = new RichTextBox();
             panel1 = new Panel();
             panel2 = new Panel();
             button3 = new Button();
@@ -65,21 +64,9 @@
             label1.TabIndex = 0;
             label1.Text = "Quản Lý Chương Trình Khuyến Mãi";
             // 
-            // richTextBox1
-            // 
-            richTextBox1.BorderStyle = BorderStyle.FixedSingle;
-            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            richTextBox1.ForeColor = SystemColors.WindowFrame;
-            richTextBox1.Location = new Point(837, 19);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(400, 41);
-            richTextBox1.TabIndex = 2;
-            richTextBox1.Text = "Tìm kiếm...";
-            // 
             // panel1
             // 
             panel1.BackColor = Color.LightGray;
-            panel1.Controls.Add(richTextBox1);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -336,7 +323,7 @@
             Controls.Add(panel1);
             Name = "KhuyenMaiGUI";
             Size = new Size(1300, 703);
-            this.Load += loadData;
+            Load += loadData;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -397,7 +384,6 @@
             // Handle the Click event here
         }
         private Label label1;
-        private RichTextBox richTextBox1;
         private Panel panel1;
         private Panel panel2;
         private Label label4;
