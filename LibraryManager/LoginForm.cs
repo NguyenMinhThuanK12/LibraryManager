@@ -41,8 +41,8 @@ namespace LibraryManager
                 return;
             }
 
-            // Truy vấn lấy thông tin tài khoản theo tên đăng nhập
-            string query = $"SELECT * FROM taikhoan WHERE TenTaiKhoan = '{username}' AND TrangThai = 'active'";
+            // Truy vấn tài khoản phải có trạng thái active và vai trò là admin
+            string query = $"SELECT * FROM taikhoan WHERE TenTaiKhoan = '{username}' AND TrangThai = 'active' AND VaiTro = 'admin'";
             DataTable dt = DatabaseConnection.ExecuteSelectQuery(query);
 
             if (dt.Rows.Count > 0)
@@ -66,9 +66,10 @@ namespace LibraryManager
             }
             else
             {
-                MessageBox.Show("Tài khoản không tồn tại hoặc đã bị vô hiệu hóa.");
+                MessageBox.Show("Tài khoản không tồn tại, đã bị vô hiệu hóa hoặc không có quyền truy cập.");
             }
         }
+
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {

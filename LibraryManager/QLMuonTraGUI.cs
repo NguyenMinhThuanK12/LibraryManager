@@ -256,23 +256,17 @@ namespace muon
             if (_dtPhieuMuon == null) return;
 
             string kw = tboxsearch.Text.Trim().Replace("'", "''");
+
             if (string.IsNullOrEmpty(kw))
             {
                 _dtPhieuMuon.DefaultView.RowFilter = "";
             }
             else
             {
-                var clauses = new List<string>
-        {
-            $"Convert(MaPhieuMuon, 'System.String') LIKE '%{kw}%'",
-            $"Convert(MaThanhVien, 'System.String') LIKE '%{kw}%'",
-            $"Convert(NgayMuon, 'System.String') LIKE '%{kw}%'",
-            $"Convert(HanTra, 'System.String') LIKE '%{kw}%'",
-            $"Convert(ThoiGianTraThucTe, 'System.String') LIKE '%{kw}%'",
-            $"Convert(TongTien, 'System.String') LIKE '%{kw}%'",
-            $"Convert(TrangThaiMuon, 'System.String') LIKE '%{kw}%'"
-        };
-                _dtPhieuMuon.DefaultView.RowFilter = string.Join(" OR ", clauses);
+                string filter =
+                    $"Convert(MaPhieuMuon, 'System.String') LIKE '%{kw}%' " +
+                    $"OR Convert(MaThanhVien, 'System.String') LIKE '%{kw}%'";
+                _dtPhieuMuon.DefaultView.RowFilter = filter;
             }
 
             if (dataGridView1.Rows.Count > 0)

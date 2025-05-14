@@ -17,14 +17,17 @@ namespace LibraryManager
         private System.Windows.Forms.TabPage tabThietBiMuon;
         private System.Windows.Forms.TabPage tabDangMuon;
         private System.Windows.Forms.DataGridView dgvThanhVien;
-        private System.Windows.Forms.DataGridView dgvThietBiMuon;
+        private System.Windows.Forms.DataGridView dgvDaTra;
         private System.Windows.Forms.DataGridView dgvDangMuon;
         private System.Windows.Forms.GroupBox groupBoxFilter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3; // Tên thiết bị
         private System.Windows.Forms.Label label4; // Tên thiết bị
-
+        private Label lblSoLuotVao; 
+        private Label lblSoThanhVien;
+        private Label lblSoLuongDaMuon;
+        private Label lblSoLuongDangMuon;
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -35,88 +38,63 @@ namespace LibraryManager
         }
 
         private void LoadDataToThanhVienGrid()
+{
+    string startDate = dtpStart.Value.ToString("yyyy-MM-dd");
+    string endDate = dtpEnd.Value.ToString("yyyy-MM-dd");
+
+    try
+    {
+        // ✅ PHẦN 1: Load dữ liệu chi tiết vào bảng
+        using (MySqlConnection conn = DatabaseConnection.GetConnection())
         {
-            try
-            {
-                using (MySqlConnection conn = DatabaseConnection.GetConnection())
-                {
-                    if (conn == null)
-                    {
-                        MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu.");
-                        return;
-                    }
+            string query = @"
+                SELECT tv.MaThanhVien, tv.HoTen, tv.NgaySinh, tv.DiaChi, tv.SDT, tv.Email, ck.thoiGianVao 
+                FROM checkin ck
+                JOIN thanhvien tv ON ck.MaThanhVien = tv.MaThanhVien
+                WHERE DATE(ck.thoiGianVao) BETWEEN @startDate AND @endDate
+                ORDER BY ck.thoiGianVao DESC
+            ";
 
-                    // Lấy giá trị ngày bắt đầu và kết thúc
-                    string startDate = dtpStart.Value.ToString("yyyy-MM-dd");
-                    string endDate = dtpEnd.Value.ToString("yyyy-MM-dd");
+            MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+            adapter.SelectCommand.Parameters.AddWithValue("@startDate", startDate);
+            adapter.SelectCommand.Parameters.AddWithValue("@endDate", endDate);
 
-                    // Thêm điều kiện lọc ngày đăng ký vào câu truy vấn SQL
-                    string query = "SELECT * FROM thanhvien WHERE NgayDangKy BETWEEN @startDate AND @endDate";
+            DataTable table = new DataTable();
+            adapter.Fill(table);
 
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    // Thêm tham số cho câu lệnh SQL
-                    adapter.SelectCommand.Parameters.AddWithValue("@startDate", startDate);
-                    adapter.SelectCommand.Parameters.AddWithValue("@endDate", endDate);
-
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-
-                    dgvThanhVien.DataSource = table;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi load dữ liệu thành viên:\n" + ex.Message);
-            }
+            dgvThanhVien.DataSource = table;
+            dgvThanhVien.Columns["MaThanhVien"].HeaderText = "Mã thành viên";
+            dgvThanhVien.Columns["HoTen"].HeaderText = "Họ tên";
+            dgvThanhVien.Columns["NgaySinh"].HeaderText = "Ngày sinh";
+            dgvThanhVien.Columns["DiaChi"].HeaderText = "Địa chỉ";
+            dgvThanhVien.Columns["SDT"].HeaderText = "SĐT";
+            dgvThanhVien.Columns["Email"].HeaderText = "Email";
+            dgvThanhVien.Columns["thoiGianVao"].HeaderText = "Thời gian vào";
         }
 
-        private void LoadDataToThietBiMuonGrid()
-        {
-            try
-            {
-                using (MySqlConnection conn = DatabaseConnection.GetConnection())
+                int tongLuotVao = 0;
+                HashSet<string> maTVSet = new HashSet<string>();
+
+                foreach (DataGridViewRow row in dgvThanhVien.Rows)
                 {
-                    if (conn == null)
+                    // Chỉ tính dòng nếu có dữ liệu
+                    if (row.Cells["MaThanhVien"].Value != null && !row.IsNewRow)
                     {
-                        MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu.");
-                        return;
+                        tongLuotVao++; // Đếm dòng thực
+                        string maTV = row.Cells["MaThanhVien"].Value.ToString();
+                        maTVSet.Add(maTV);
                     }
-
-                    // Lấy giá trị từ DateTimePicker
-                    DateTime startDate = dtpStart.Value;
-                    DateTime endDate = dtpEnd.Value;
-
-                    // Lấy giá trị tên sản phẩm từ TextBox
-                    string productName = txtProductName.Text.Trim(); // Loại bỏ khoảng trắng thừa
-
-                    // Truy vấn SQL với JOIN giữa ba bảng PhieuMuon, ChiTietPhieuMuon và SanPham
-                    string query = "SELECT pm.MaPhieuMuon, sp.TenSanPham, ctp.SoLuong, ctp.TienCocMuon, ctp.GiaMuon,pm.TrangThaiMuon " +
-                                   "FROM ChiTietPhieuMuon ctp " +
-                                   "JOIN PhieuMuon pm ON ctp.MaPhieuMuon = pm.MaPhieuMuon " +
-                                   "JOIN SanPham sp ON ctp.MaSanPham = sp.MaSanPham " +
-                                   "WHERE pm.TrangThaiMuon = 'Đang mượn' " +
-                                   "AND pm.NgayMuon BETWEEN @startDate AND @endDate " +  // Lọc theo ngày mượn
-                                   "AND sp.TenSanPham LIKE @productName";  // Lọc theo tên sản phẩm
-
-                    // Tạo MySqlDataAdapter và thêm tham số
-                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
-                    adapter.SelectCommand.Parameters.AddWithValue("@startDate", startDate);
-                    adapter.SelectCommand.Parameters.AddWithValue("@endDate", endDate);
-                    adapter.SelectCommand.Parameters.AddWithValue("@productName", "%" + productName + "%"); // Tên sản phẩm từ TextBox
-
-                    // Tạo DataTable và điền dữ liệu từ câu lệnh SQL
-                    DataTable table = new DataTable();
-                    adapter.Fill(table);
-
-                    // Gán dữ liệu vào DataGridView
-                    dgvThietBiMuon.DataSource = table;
                 }
+
+                int tongThanhVien = maTVSet.Count;
+                lblSoLuotVao.Text = $"Tổng số lượt vào: {tongLuotVao}";
+                lblSoThanhVien.Text = $"Tổng số thành viên: {tongThanhVien}";
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi load dữ liệu thiết bị mượn:\n" + ex.Message);
-            }
-        }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Lỗi khi load dữ liệu thành viên:\n" + ex.Message);
+    }
+}
 
 
         private void LoadDataToDangMuonGrid()
@@ -131,31 +109,108 @@ namespace LibraryManager
                         return;
                     }
 
-                    // Lấy giá trị từ DateTimePicker
                     DateTime startDate = dtpStart.Value;
                     DateTime endDate = dtpEnd.Value;
-
-                    // Lấy tên sản phẩm từ ComboBox
                     string productName = txtProductName.Text.Trim();
 
-                    // Truy vấn dữ liệu các thiết bị đã trả
-                    string query = "SELECT pm.MaPhieuMuon, sp.TenSanPham, ctp.SoLuong, ctp.TienCocMuon, ctp.GiaMuon,pm.TrangThaiMuon " +
+                    // Câu truy vấn có thêm điều kiện sp.TrangThai = 'active'
+                    string query = "SELECT pm.MaPhieuMuon, sp.TenSanPham, ctp.SoLuong, ctp.TienCocMuon, ctp.GiaMuon, pm.TrangThaiMuon " +
                                    "FROM ChiTietPhieuMuon ctp " +
                                    "JOIN PhieuMuon pm ON ctp.MaPhieuMuon = pm.MaPhieuMuon " +
                                    "JOIN SanPham sp ON ctp.MaSanPham = sp.MaSanPham " +
-                                   "WHERE pm.TrangThaiMuon = 'Đã trả' " +
+                                   "WHERE pm.TrangThaiMuon = 'Chưa Trả' " +
                                    "AND pm.NgayMuon BETWEEN @startDate AND @endDate " +
-                                   "AND sp.TenSanPham LIKE @productName";
+                                   "AND sp.TrangThai = 'active' ";
+
+                    if (productName != "Tất cả")
+                    {
+                        query += "AND sp.TenSanPham LIKE @productName ";
+                    }
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     adapter.SelectCommand.Parameters.AddWithValue("@startDate", startDate);
                     adapter.SelectCommand.Parameters.AddWithValue("@endDate", endDate);
-                    adapter.SelectCommand.Parameters.AddWithValue("@productName", "%" + productName + "%");
+                    if (productName != "Tất cả")
+                    {
+                        adapter.SelectCommand.Parameters.AddWithValue("@productName", "%" + productName + "%");
+                    }
 
                     DataTable table = new DataTable();
                     adapter.Fill(table);
+                    dgvDangMuon.DataSource = table;
+                    //  Tính tổng số lượng
+                    int tongSoLuong = 0;
+                    foreach (DataRow row in table.Rows)
+                    {
+                        if (int.TryParse(row["SoLuong"].ToString(), out int sl))
+                        {
+                            tongSoLuong += sl;
+                        }
+                    }
 
-                    dgvThietBiMuon.DataSource = table; // hoặc dgvDaTra nếu bạn dùng DataGridView riêng cho đã trả
+                    lblSoLuongDangMuon.Text = $"Tổng số thiết bị đang mượn: {tongSoLuong}";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi load dữ liệu thiết bị đang mượn:\n" + ex.Message);
+            }
+        }
+
+
+
+        private void LoadDataToDaTraGrid()
+        {
+            try
+            {
+                using (MySqlConnection conn = DatabaseConnection.GetConnection())
+                {
+                    if (conn == null)
+                    {
+                        MessageBox.Show("Không thể kết nối đến cơ sở dữ liệu.");
+                        return;
+                    }
+
+                    DateTime startDate = dtpStart.Value;
+                    DateTime endDate = dtpEnd.Value;
+                    string productName = txtProductName.Text.Trim();
+
+                    string query = "SELECT pm.MaPhieuMuon, sp.TenSanPham, ctp.SoLuong, ctp.TienCocMuon, ctp.GiaMuon, pm.TrangThaiMuon " +
+                       "FROM ChiTietPhieuMuon ctp " +
+                       "JOIN PhieuMuon pm ON ctp.MaPhieuMuon = pm.MaPhieuMuon " +
+                       "JOIN SanPham sp ON ctp.MaSanPham = sp.MaSanPham " +
+                       "WHERE pm.TrangThaiMuon = 'Đã trả' " +
+                       "AND pm.NgayMuon BETWEEN @startDate AND @endDate " +
+                       "AND sp.TrangThai = 'active'";
+
+                    //  Nếu KHÔNG chọn "Tất cả", thêm điều kiện lọc theo tên sản phẩm
+                    if (productName != "Tất cả")
+                    {
+                        query += "AND sp.TenSanPham LIKE @productName";
+                    }
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@startDate", startDate);
+                    adapter.SelectCommand.Parameters.AddWithValue("@endDate", endDate);
+
+                    if (productName != "Tất cả")
+                        adapter.SelectCommand.Parameters.AddWithValue("@productName", "%" + productName + "%");
+
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+                    dgvDaTra.DataSource = table;
+
+                    //  Tính tổng số lượng
+                    int tongSoLuong = 0;
+                    foreach (DataRow row in table.Rows)
+                    {
+                        if (int.TryParse(row["SoLuong"].ToString(), out int sl))
+                        {
+                            tongSoLuong += sl;
+                        }
+                    }
+
+                    lblSoLuongDaMuon.Text = $"Tổng số thiết bị đã mượn: {tongSoLuong}";
                 }
             }
             catch (Exception ex)
@@ -164,10 +219,11 @@ namespace LibraryManager
             }
         }
 
+
         private void BtnThongKe_Click(object sender, EventArgs e)
         {
             LoadDataToThanhVienGrid();
-            LoadDataToThietBiMuonGrid();
+            LoadDataToDaTraGrid();
             LoadDataToDangMuonGrid();
         }
         private void LoadProductNamesToComboBox()
@@ -182,26 +238,24 @@ namespace LibraryManager
                         return;
                     }
 
-                    string query = "SELECT TenSanPham FROM SanPham";  // Truy vấn lấy tên sản phẩm
+                    string query = "SELECT TenSanPham FROM SanPham WHERE TrangThai = 'active'";
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
                     DataTable table = new DataTable();
                     adapter.Fill(table);
 
-                    // Clear ComboBox trước khi thêm
                     txtProductName.Items.Clear();
 
-                    // Thêm tên sản phẩm vào ComboBox
+                    //  Thêm mục "Tất cả" lên đầu
+                    txtProductName.Items.Add("Tất cả");
+
                     foreach (DataRow row in table.Rows)
                     {
                         txtProductName.Items.Add(row["TenSanPham"].ToString());
                     }
 
-                    // Nếu có ít nhất một sản phẩm, chọn sản phẩm đầu tiên
-                    if (txtProductName.Items.Count > 0)
-                    {
-                        txtProductName.SelectedIndex = 0;
-                    }
+                    // Chọn "Tất cả" làm mặc định
+                    txtProductName.SelectedIndex = 0;
                 }
             }
             catch (Exception ex)
@@ -226,7 +280,7 @@ namespace LibraryManager
             tabThanhVien = new TabPage();
             dgvThanhVien = new DataGridView();
             tabThietBiMuon = new TabPage();
-            dgvThietBiMuon = new DataGridView();
+            dgvDaTra = new DataGridView();
             tabDangMuon = new TabPage();
             dgvDangMuon = new DataGridView();
             groupBoxFilter = new GroupBox();
@@ -234,11 +288,12 @@ namespace LibraryManager
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            
             tabControl.SuspendLayout();
             tabThanhVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvThanhVien).BeginInit();
             tabThietBiMuon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvThietBiMuon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDaTra).BeginInit();
             tabDangMuon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDangMuon).BeginInit();
             groupBoxFilter.SuspendLayout();
@@ -248,21 +303,21 @@ namespace LibraryManager
             // 
             dtpStart.Location = new Point(10, 50);
             dtpStart.Name = "dtpStart";
-            dtpStart.Size = new Size(204, 30);
+            dtpStart.Size = new Size(258, 30);
             dtpStart.TabIndex = 0;
             // 
             // dtpEnd
             // 
-            dtpEnd.Location = new Point(220, 50);
+            dtpEnd.Location = new Point(299, 53);
             dtpEnd.Name = "dtpEnd";
-            dtpEnd.Size = new Size(208, 30);
+            dtpEnd.Size = new Size(264, 30);
             dtpEnd.TabIndex = 1;
             // 
             // txtProductName
             // 
-            txtProductName.Location = new Point(493, 49);
+            txtProductName.Location = new Point(654, 53);
             txtProductName.Name = "txtProductName";
-            txtProductName.Size = new Size(121, 31);
+            txtProductName.Size = new Size(281, 31);
             txtProductName.TabIndex = 2;
             txtProductName.SelectedIndexChanged += txtProductName_SelectedIndexChanged;
             // 
@@ -271,7 +326,7 @@ namespace LibraryManager
             btnThongKe.BackColor = Color.FromArgb(0, 123, 255);
             btnThongKe.FlatStyle = FlatStyle.Flat;
             btnThongKe.ForeColor = Color.White;
-            btnThongKe.Location = new Point(786, 29);
+            btnThongKe.Location = new Point(1003, 53);
             btnThongKe.Name = "btnThongKe";
             btnThongKe.Size = new Size(105, 33);
             btnThongKe.TabIndex = 4;
@@ -285,61 +340,104 @@ namespace LibraryManager
             tabControl.Controls.Add(tabThietBiMuon);
             tabControl.Controls.Add(tabDangMuon);
             tabControl.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            tabControl.Location = new Point(20, 96);
+            tabControl.Location = new Point(20, 123);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(928, 463);
+            tabControl.Size = new Size(1261, 620);
             tabControl.TabIndex = 1;
             // 
             // tabThanhVien
             // 
-            tabThanhVien.Controls.Add(dgvThanhVien);
+            Panel panelThanhVien = new Panel();
+            panelThanhVien.Dock = DockStyle.Fill;
+            tabThanhVien.Controls.Add(panelThanhVien);
+
+        
             tabThanhVien.Location = new Point(4, 29);
             tabThanhVien.Name = "tabThanhVien";
-            tabThanhVien.Size = new Size(920, 430);
+            tabThanhVien.Size = new Size(1253, 700);
             tabThanhVien.TabIndex = 0;
             tabThanhVien.Text = "📚 Thành viên học tập";
             // 
             // dgvThanhVien
             // 
+            dgvThanhVien.Dock = DockStyle.Top;
+            dgvThanhVien.Height = 550; // Giảm chiều cao để chừa chỗ cho label 
+            dgvThanhVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvThanhVien.BackgroundColor = Color.WhiteSmoke;
             dgvThanhVien.BorderStyle = BorderStyle.Fixed3D;
             dgvThanhVien.ColumnHeadersHeight = 29;
-            dgvThanhVien.Dock = DockStyle.Fill;
             dgvThanhVien.Location = new Point(0, 0);
             dgvThanhVien.Name = "dgvThanhVien";
             dgvThanhVien.RowHeadersWidth = 51;
-            dgvThanhVien.Size = new Size(920, 430);
+            dgvThanhVien.Size = new Size(1253, 550);
             dgvThanhVien.TabIndex = 0;
             dgvThanhVien.CellContentClick += dgvThanhVien_CellContentClick;
+            panelThanhVien.Controls.Add(dgvThanhVien);
+
+            lblSoLuotVao = new Label();
+            lblSoLuotVao.Text = "Tổng số lượt vào: ";
+            lblSoLuotVao.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblSoLuotVao.Location = new Point(10, 560); // Ngay dưới bảng
+            lblSoLuotVao.AutoSize = true;
+
+            lblSoThanhVien = new Label();
+            lblSoThanhVien.Text = "Tổng số thành viên: ";
+            lblSoThanhVien.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblSoThanhVien.Location = new Point(320, 560);
+            lblSoThanhVien.AutoSize = true;
+
+            panelThanhVien.Controls.Add(lblSoLuotVao);
+            panelThanhVien.Controls.Add(lblSoThanhVien);
             // 
             // tabThietBiMuon
             // 
-            tabThietBiMuon.Controls.Add(dgvThietBiMuon);
+
+            Panel panelThietBiDaMuon = new Panel();
+            panelThietBiDaMuon.Dock = DockStyle.Fill;
+
+            tabThietBiMuon.Controls.Add(panelThietBiDaMuon);
+           
             tabThietBiMuon.Location = new Point(4, 29);
             tabThietBiMuon.Name = "tabThietBiMuon";
-            tabThietBiMuon.Size = new Size(920, 430);
+            tabThietBiMuon.Size = new Size(1253, 700);
             tabThietBiMuon.TabIndex = 1;
             tabThietBiMuon.Text = "📦 Thiết bị đã mượn";
             // 
             // dgvThietBiMuon
             // 
-            dgvThietBiMuon.BackgroundColor = Color.WhiteSmoke;
-            dgvThietBiMuon.BorderStyle = BorderStyle.Fixed3D;
-            dgvThietBiMuon.ColumnHeadersHeight = 29;
-            dgvThietBiMuon.Dock = DockStyle.Fill;
-            dgvThietBiMuon.Location = new Point(0, 0);
-            dgvThietBiMuon.Name = "dgvThietBiMuon";
-            dgvThietBiMuon.RowHeadersWidth = 51;
-            dgvThietBiMuon.Size = new Size(920, 430);
-            dgvThietBiMuon.TabIndex = 0;
+            dgvDaTra.BackgroundColor = Color.WhiteSmoke;
+            dgvDaTra.BorderStyle = BorderStyle.Fixed3D;
+            dgvDaTra.ColumnHeadersHeight = 29;
+            dgvThanhVien.Dock = DockStyle.Top;
+            dgvThanhVien.Height = 550;
+            dgvDaTra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvDaTra.Location = new Point(0, 0);
+            dgvDaTra.Name = "dgvThietBiMuon";
+            dgvDaTra.RowHeadersWidth = 51;
+            dgvDaTra.Size = new Size(1253, 550);
+            dgvDaTra.TabIndex = 0;
+
+
+            lblSoLuongDaMuon = new Label();
+            lblSoLuongDaMuon.Text = "Tổng số thiết bị đã mượn: ";
+            lblSoLuongDaMuon.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblSoLuongDaMuon.Location = new Point(10, 560); // Ngay dưới bảng
+            lblSoLuongDaMuon.AutoSize = true;
+
+            panelThietBiDaMuon.Controls.Add(dgvDaTra);
+            panelThietBiDaMuon.Controls.Add(lblSoLuongDaMuon);
             // 
             // tabDangMuon
             // 
-            tabDangMuon.Controls.Add(dgvDangMuon);
+            Panel panelThietBiDangMuon = new Panel();
+            panelThietBiDangMuon.Dock = DockStyle.Fill;
+
+            tabDangMuon.Controls.Add(panelThietBiDangMuon);
+            
             tabDangMuon.Location = new Point(4, 29);
             tabDangMuon.Name = "tabDangMuon";
-            tabDangMuon.Size = new Size(920, 430);
+            tabDangMuon.Size = new Size(1253, 700);
             tabDangMuon.TabIndex = 2;
             tabDangMuon.Text = "🔄 Thiết bị đang mượn";
             // 
@@ -348,12 +446,23 @@ namespace LibraryManager
             dgvDangMuon.BackgroundColor = Color.WhiteSmoke;
             dgvDangMuon.BorderStyle = BorderStyle.Fixed3D;
             dgvDangMuon.ColumnHeadersHeight = 29;
-            dgvDangMuon.Dock = DockStyle.Fill;
+            dgvThanhVien.Dock = DockStyle.Top;
+            dgvThanhVien.Height = 550; // Giảm chiều cao để chừa chỗ cho label 
+            dgvDangMuon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvDangMuon.Location = new Point(0, 0);
             dgvDangMuon.Name = "dgvDangMuon";
             dgvDangMuon.RowHeadersWidth = 51;
-            dgvDangMuon.Size = new Size(920, 430);
+            dgvDangMuon.Size = new Size(1253, 550);
             dgvDangMuon.TabIndex = 0;
+
+            lblSoLuongDangMuon = new Label();
+            lblSoLuongDangMuon.Text = "Tổng số thiết bị đang mượn: ";
+            lblSoLuongDangMuon.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblSoLuongDangMuon.Location = new Point(10, 560); // Ngay dưới bảng
+            lblSoLuongDangMuon.AutoSize = true;
+
+            panelThietBiDangMuon.Controls.Add(dgvDangMuon);
+            panelThietBiDangMuon.Controls.Add(lblSoLuongDangMuon);
             // 
             // groupBoxFilter
             // 
@@ -368,7 +477,7 @@ namespace LibraryManager
             groupBoxFilter.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             groupBoxFilter.Location = new Point(20, 10);
             groupBoxFilter.Name = "groupBoxFilter";
-            groupBoxFilter.Size = new Size(940, 80);
+            groupBoxFilter.Size = new Size(1261, 107);
             groupBoxFilter.TabIndex = 0;
             groupBoxFilter.TabStop = false;
             groupBoxFilter.Text = "Bộ lọc thống kê";
@@ -383,7 +492,7 @@ namespace LibraryManager
             // 
             // label2
             // 
-            label2.Location = new Point(220, 24);
+            label2.Location = new Point(299, 24);
             label2.Name = "label2";
             label2.Size = new Size(100, 23);
             label2.TabIndex = 6;
@@ -391,7 +500,7 @@ namespace LibraryManager
             // 
             // label3
             // 
-            label3.Location = new Point(493, 24);
+            label3.Location = new Point(654, 24);
             label3.Name = "label3";
             label3.Size = new Size(133, 23);
             label3.TabIndex = 7;
@@ -412,13 +521,13 @@ namespace LibraryManager
             Controls.Add(groupBoxFilter);
             Controls.Add(tabControl);
             Name = "ThongKe";
-            Size = new Size(960, 575);
+            Size = new Size(1299, 750);
             Load += Form1_Load;
             tabControl.ResumeLayout(false);
             tabThanhVien.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvThanhVien).EndInit();
             tabThietBiMuon.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvThietBiMuon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDaTra).EndInit();
             tabDangMuon.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvDangMuon).EndInit();
             groupBoxFilter.ResumeLayout(false);

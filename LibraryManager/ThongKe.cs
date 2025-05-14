@@ -21,7 +21,7 @@ namespace LibraryManager
         {
 
             LoadDataToThanhVienGrid();
-            LoadDataToThietBiMuonGrid();
+            LoadDataToDaTraGrid();
             LoadDataToDangMuonGrid();
 
 
@@ -35,7 +35,7 @@ namespace LibraryManager
         private void btnThongKe_Click_1(object sender, EventArgs e)
         {
             LoadDataToThanhVienGrid();
-            LoadDataToThietBiMuonGrid();
+            LoadDataToDaTraGrid();
             LoadDataToDangMuonGrid();
         }
 

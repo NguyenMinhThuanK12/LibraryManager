@@ -63,7 +63,6 @@
             sdt = new DataGridViewTextBoxColumn();
             email = new DataGridViewTextBoxColumn();
             ngayDangKy = new DataGridViewTextBoxColumn();
-            textBox2 = new TextBox();
             panel1.SuspendLayout();
             pn_QLTV.SuspendLayout();
             pn_QLTV2.SuspendLayout();
@@ -77,7 +76,6 @@
             // 
             // panel1
             // 
-            //panel1.BackColor = Color.FromArgb(255, 192, 192);
             panel1.BackColor = Color.White;
             panel1.Controls.Add(pn_QLTV);
             panel1.Controls.Add(pn_QLTV2);
@@ -317,7 +315,6 @@
             // pn_QLTV1
             // 
             pn_QLTV1.BackColor = Color.FromArgb(255, 192, 192);
-            pn_QLTV1.Controls.Add(textBox2);
             pn_QLTV1.Controls.Add(pn_TimKiem);
             pn_QLTV1.Controls.Add(data_Tb_QLTV);
             pn_QLTV1.Location = new Point(0, 77);
@@ -428,21 +425,12 @@
             ngayDangKy.Name = "ngayDangKy";
             ngayDangKy.ReadOnly = true;
             // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.WhiteSmoke;
-            textBox2.Location = new Point(641, 60);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(216, 27);
-            textBox2.TabIndex = 14;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // QuanLyThanhVien
+            // QLThanhVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(panel1);
-            Name = "QuanLyThanhVien";
+            Name = "QLThanhVien";
             Size = new Size(1282, 703);
             panel1.ResumeLayout(false);
             pn_QLTV.ResumeLayout(false);
@@ -453,7 +441,6 @@
             pn_ThongTin.ResumeLayout(false);
             pn_ThongTin.PerformLayout();
             pn_QLTV1.ResumeLayout(false);
-            pn_QLTV1.PerformLayout();
             pn_TimKiem.ResumeLayout(false);
             pn_TimKiem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)data_Tb_QLTV).EndInit();
@@ -497,6 +484,5 @@
         private DataGridViewTextBoxColumn sdt;
         private DataGridViewTextBoxColumn email;
         private DataGridViewTextBoxColumn ngayDangKy;
-        private TextBox textBox2;
     }
 }
