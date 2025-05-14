@@ -67,6 +67,8 @@ namespace LibraryManager.UI
 
             Controls.Add(CreateLabel("Số lượng", y += 50));
             txtSoLuong = CreateTextBox(y += 30);
+            txtSoLuong.Enabled = false;
+
 
             Controls.Add(CreateLabel("Giá trị", y += 50));
             txtGiaTri = CreateTextBox(y += 30);
@@ -127,8 +129,8 @@ namespace LibraryManager.UI
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtTen.Text) ||
-                !int.TryParse(txtSoLuong.Text, out int soLuong) ||
+            if (string.IsNullOrWhiteSpace(txtTen.Text) 
+               ||
                 !double.TryParse(txtGiaTri.Text, out double giaTri))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ và đúng định dạng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -145,7 +147,7 @@ namespace LibraryManager.UI
             var device = new DeviceModel
             {
                 TenThietBi = txtTen.Text,
-                SoLuong = soLuong,
+                SoLuong = 0,
                 GiaTri = giaTri,
                 IDTheLoai = (int)cbTheLoai.SelectedValue,
                 IDViTri = (int)cbViTri.SelectedValue,
